@@ -29,4 +29,8 @@ cat << "EOF"
 0===0
 EOF
 echo ""
-echo "Type ''floflis help'' (without quotes) to see a list of available commands."
+echo "Type 'floflis --help' (without quotes) to see a list of available commands."
+
+# support updates if Dat is installed
+
+# identify from settings parameters, and install
