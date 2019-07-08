@@ -1,7 +1,8 @@
 #!/bin/bash
 
-echo ""
-cat << "EOF"   
+if [ "$1" = "" ]; then
+   cat << "EOF"
+ 
 0===0
  O=o
   O
@@ -27,9 +28,15 @@ cat << "EOF"
   O
  o=O
 0===0
+
 EOF
-echo ""
-echo "Type 'floflis --help' (without quotes) to see a list of available commands."
+   echo "Type 'floflis --help' (without quotes) to see a list of available commands."
+fi
+
+if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
+   echo "Available commands:"
+   echo "   --help, -h                  Shows all available commands"
+fi
 
 # support updates if Dat is installed
 
