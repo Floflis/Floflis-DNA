@@ -19,4 +19,3 @@ sudo cp floflis /usr/sbin
 echo "Turning Floflis DNA into a executable..."
 sudo chmod 755 /usr/sbin/floflis
 echo "Successfully installed. Just type 'floflis' (without quotes) to open it."
-# ask if want to open it after installed
