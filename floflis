@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# import settings:
+. ./config || exit 1
+
+# shows presentation if user just types 'floflis':
 if [ "$1" = "" ]; then
    cat << "EOF"
  
@@ -33,11 +37,66 @@ EOF
    echo "Type 'floflis --help' (without quotes) to see a list of available commands."
 fi
 
+# displays help message with a list of commands:
 if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
+   echo "Use these commands after/together with 'floflis' command."
    echo "Available commands:"
+   echo "Information:"
    echo "   --help, -h                  Shows all available commands"
+# todo:
+#   echo "   license                     Shows Floflis' license file"
+#   echo "   disclaimer                  Shows Floflis' disclaimer file"
+   echo "   coc                         Shows Floflis' Code of Conduct"
+   echo "Power/energy:"
+   echo "   shutdown, shu, off          Shutdown/power-off Floflis"
+   echo "   restart, res, reboot        Restarts Floflis"
+   echo "   suspend, sus, standby       Suspends Floflis"
 fi
 
-# support updates if Dat is installed
+# todo:import commands as external programs of Floflis DNA
 
-# identify from settings parameters, and install
+# todo:
+# if [ \( "$1" = "license" \) -o \( "$2" = "" \) ]; then
+#    cat LICENSE
+# fi
+
+# if [ \( "$1" = "license" \) -o \( "$2" = "-d" \) ] || [ "$1" = "disclaimer" ]; then
+#    cat DISCLAIMER
+# fi
+
+# if argument 1 is license and 2 is disclaimer, or argument 1 is disclaimer, show it
+# if [ \( "$g" -eq 1 -a "$c" = "123" \) -o \( "$g" -eq 2 -a "$c" = "456" \) ]
+# then echo abc
+# else echo efg
+# fi
+
+if [ "$1" = "codeofconduct" ] || [ "$1" = "conductcode" ] || [ "$1" = "coc" ] || [ "$1" = "--coc" ]; then
+   echo "Floflis' Code of Conduct:"
+   cat CODE_OF_CONDUCT.md
+fi
+
+if [ "$1" = "poweroff" ] || [ "$1" = "off" ] || [ "$1" = "shutdown" ] || [ "$1" = "shu" ]; then
+   systemctl poweroff
+fi
+
+if [ "$1" = "reboot" ] || [ "$1" = "restart" ] || [ "$1" = "res" ]; then
+   systemctl reboot
+fi
+# todo:if command is "reset" or "refresh", ask
+
+if [ "$1" = "suspend" ] || [ "$1" = "sus" ] || [ "$1" = "standby" ]; then
+   systemctl suspend
+fi
+
+# ask if user really wants to shutdown/reboot/suspend
+#todo: systemctl hibernate / systemctl hybrid-sleep
+
+# todo:support updates if Dat is installed
+
+# todo:identify from settings parameters, and install (--all, etc)
+
+# todo:upgrd
+
+# todo:read-more lib
+
+# saved commands
