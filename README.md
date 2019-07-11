@@ -43,8 +43,23 @@ Insert your password, and Floflis will be installed.
 
 ## Updating
 
-Just download a new version, or pull with git. Then, re-run the above command.
-It can also be updated if Dat protocol is installed.
+Update from P2P network:
+
+```bash
+floflis update
+```
+
+Update from GitLab:
+
+```bash
+floflis update --gitlab
+```
+
+Update from GitHub:
+
+```bash
+floflis update --github
+```
 
 ## To do
 * saved commands
