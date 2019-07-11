@@ -52,10 +52,15 @@ if [ -e modules/information-reader ]
 then
     source /usr/sbin/layers/dna/modules/information-reader
 fi
-# energy
+# energyupdate
 if [ -e modules/energy ]
 then
     source /usr/sbin/layers/dna/modules/energy
+fi
+# update
+if [ -e modules/update ]
+then
+    source /usr/sbin/layers/dna/modules/update
 fi
 
 # todo:support updates if Dat is installed

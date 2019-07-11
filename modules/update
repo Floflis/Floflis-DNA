@@ -1,0 +1,41 @@
+#!/bin/bash
+if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
+   echo "Updates:"
+   echo "   update (--gitlab, --github) Updates Floflis DNA (centralized, yet)"
+fi
+
+if [ "$1" = "update" ] || [ "$1" = "updt" ] || [ "$1" = "next" ] || [ "$1" = "up" ]; then
+   if [ "$2" = "" ]; then
+      echo "Can't update yet on a decentralized manner. Please use 'update --gitlab' command."
+fi
+fi
+
+if [ "$1" = "update" ]; then
+   if [ "$2" = "gitlab" ] || [ "$2" = "--gitlab" ]; then
+      echo "- Updating Floflis DNA (from GitLab)..."
+      cd /usr/sbin/layers/dna && sudo git pull origin master
+      echo "(✓) Successfully updated Floflis DNA."
+fi
+   if [ "$2" = "github" ] || [ "$2" = "--github" ]; then
+      echo "(?) GitHub is owned by Microsoft. Are you sure Microsoft likes us?"
+      echo "1. Yes, I'll receive Floflis updates from Microsoft"
+      echo "2. No"
+      echo "Please type 1 or 2 according to your choice, and press [ENTER]:"
+      read microsoftyes
+      if [ "$microsoftyes" = "" ]; then
+         echo "What?"
+         floflis
+fi
+      if [ "$microsoftyes" = "2" ]; then
+         echo "If you don't trust MS, you're a true Floflis citizen."
+         floflis update
+fi
+      if [ "$microsoftyes" = "1" ]; then
+         echo "If you receive a blue screen, don't blame on us." && echo "- Updating Floflis DNA (from Microsoft GitHub)..."
+         cd /usr/sbin/layers/dna
+         sudo git pull github master
+# && trace_output "(✓) Successfully updated Floflis DNA. Blue Screen is a feature :p" || exit_on_error "(X) Couldn't update Floflis DNA. Please verify your Internet connection, or manually download Floflis from a connected computer and re-install."
+#        echo ""
+fi
+fi
+fi
