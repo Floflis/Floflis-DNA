@@ -36,7 +36,7 @@ Can evolve to Core and even graphical versions.
 Inside the clonned/downloaded extracted folder, open Terminal and type the following:
 
 ```bash
-sudo chmod 755 install.sh && ./install.sh
+sudo chmod 755 install.sh && sudo ./install.sh
 ```
 
 Insert your password, and Floflis will be installed.
@@ -45,3 +45,10 @@ Insert your password, and Floflis will be installed.
 
 Just download a new version, or pull with git. Then, re-run the above command.
 It can also be updated if Dat protocol is installed.
+
+## To do
+* saved commands
+* themes
+* list the biggest programs/packages
+* remove bloatware
+* script to remove proprietary blobs from kernel
