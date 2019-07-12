@@ -13,8 +13,9 @@ fi
 if [ "$1" = "update" ]; then
    if [ "$2" = "gitlab" ] || [ "$2" = "--gitlab" ]; then
       echo "- Updating Floflis DNA (from GitLab)..."
+      echo "(i) Updating a Layer requires sudo mode;"
       cd /usr/sbin/layers/dna && sudo git pull origin master
-      echo "(✓) Successfully updated Floflis DNA."
+#      echo "(✓) Successfully updated Floflis DNA."
 fi
    if [ "$2" = "github" ] || [ "$2" = "--github" ]; then
       echo "(?) GitHub is owned by Microsoft. Are you sure Microsoft likes us?"
@@ -32,10 +33,9 @@ fi
 fi
       if [ "$microsoftyes" = "1" ]; then
          echo "If you receive a blue screen, don't blame on us." && echo "- Updating Floflis DNA (from Microsoft GitHub)..."
+         echo "(i) Updating a Layer requires sudo mode;"
          cd /usr/sbin/layers/dna
          sudo git pull github master
-# && trace_output "(✓) Successfully updated Floflis DNA. Blue Screen is a feature :p" || exit_on_error "(X) Couldn't update Floflis DNA. Please verify your Internet connection, or manually download Floflis from a connected computer and re-install."
-#        echo ""
 fi
 fi
 fi
