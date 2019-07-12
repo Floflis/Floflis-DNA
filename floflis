@@ -39,6 +39,14 @@ fi
 
 # displays help message with a list of commands:
 if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
+   cat << "EOF"
+
+-. .-.   .-. .-.   .-. .-.   .
+  \   \ /   \   \ /   \   \ /
+ / \   \   / \   \   / \   \
+~   `-~ `-`   `-~ `-`   `-~ `-
+
+EOF
    echo "Use these commands after/together with 'floflis' command."
    echo "Available commands:"
    echo "Information:"
