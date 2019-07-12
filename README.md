@@ -32,7 +32,7 @@ The heart of Floflis, 100% CLI.
 
 Can evolve to Core and even graphical versions (not available yet).
 
-Subscribe to [our blog]() for news.
+Subscribe to [our blog](https://floflis.github.io/blog/) for news.
 
 ## Downloading
 
@@ -40,7 +40,7 @@ Please don't directly download the source as zip/tar.gz; clone it. (you can down
 
 You can also download a packaged release [here]().
 
-For more details, visit our [downloads page]().
+For more details, visit our [downloads page](https://floflis.github.io/download/).
 
 ## Before installing
 
