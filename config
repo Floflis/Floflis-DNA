@@ -1,6 +1,5 @@
 #!/bin/bash
-layer=""
-desired=""
-install=""
-
-# https://peepeth.com/?PeepethLoves=floflis
+layer="dna"
+desired="dna"
+desiredincluded="self" # self, no, yes
+install="new" # new, ok
