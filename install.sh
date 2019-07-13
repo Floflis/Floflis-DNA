@@ -59,7 +59,7 @@ sudo mkdir /usr/sbin/layers
 echo "- Creating folder for Floflis' DNA in /usr/sbin/layers..."
 sudo mkdir /usr/sbin/layers/dna
 echo "- Installing Floflis' DNA..."
-sudo cp -r . /usr/sbin/layers/dna
+sudo cp -r --preserve=all . /usr/sbin/layers/dna
 echo "- Turning Floflis into a executable..."
 sudo chmod 755 /usr/sbin/floflis
 echo "(✓) Successfully installed. Just type 'floflis' (without quotes) and hit 'enter' button to open it."
