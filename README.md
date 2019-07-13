@@ -103,3 +103,5 @@ floflis update --github
 * themes
 * receive updates from native dat (when it is available)
 * install CLI software from Substratum and other layers
+* `floflis update -h` command
+* modules as git submodules?
