@@ -26,6 +26,8 @@
 0===0
 ```
 
+[Site](https://floflis.github.io/) | [Download](https://floflis.github.io/download/) | [Blog](https://floflis.github.io/blog/) | [Manuals/documentation](https://floflis.github.io/docs/) | [Peepeth](https://peepeth.com/floflis) | [Twitter](https://twitter.com/FloflisOS) | [Developers](https://floflis.github.io/docs/dev/) | [Sources](https://floflis.github.io/source/)
+
 # Floflis DNA
 
 The heart of Floflis, 100% CLI.
@@ -38,13 +40,15 @@ Subscribe to [our blog](https://floflis.github.io/blog/) for news.
 
 You can download a packaged release [here](https://github.com/Floflis/Floflis-DNA/releases/download/071/Floflis.DNA.tar.gz).
 
-If you need the source, please don't directly download the source; clone it. (you can download as compressed file, but you will need manual work to update Floflis).
+Lite version (needs manual update) [here](https://github.com/Floflis/Floflis-DNA/releases/download/071/Floflis.DNA.Lite.tar.gz).
+
+If you need the source, please don't directly download the source; clone it. (you can download as compressed file, but you will need manual work to update Floflis, like on the Lite version).
 
 For more details, visit our [downloads page](https://floflis.github.io/download/).
 
 ## Before installing
 
-**Note**: You can skip this step if your device haves enough storage space available. If the target device is limited (like a WiFi router), this pre-install step will be needed.
+**Note**: You can skip this step if your device haves enough storage space available. If the target device is limited (like a WiFi router), this pre-install step will be needed, except when you'd already downloaded the Lite version.
 
 If you wish to remove the updates module (which includes .git folder), please copy the `Floflis DNA` folder, so you will have a copy which you can update (`git pull`).
 
@@ -105,3 +109,8 @@ floflis update --github
 * install CLI software from Substratum and other layers
 * `floflis update -h` command
 * modules as git submodules?
+* CHANGELOG
+* GitLab releases
+* Dat releases
+* ZN releases
+* Improved updater, with update script
