@@ -56,17 +56,17 @@ fi
 # load modules
 # -
 # information-reader
-if [ -e modules/information-reader ]
+if [ -e /usr/sbin/layers/dna/modules/information-reader ]
 then
     source /usr/sbin/layers/dna/modules/information-reader
 fi
 # energyupdate
-if [ -e modules/energy ]
+if [ -e /usr/sbin/layers/dna/modules/energy ]
 then
     source /usr/sbin/layers/dna/modules/energy
 fi
 # update
-if [ -e modules/update ]
+if [ -e /usr/sbin/layers/dna/modules/update ]
 then
     source /usr/sbin/layers/dna/modules/update
 fi
