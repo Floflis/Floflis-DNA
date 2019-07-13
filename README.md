@@ -38,7 +38,7 @@ Subscribe to [our blog](https://floflis.github.io/blog/) for news.
 
 You can download a packaged release [here](https://github.com/Floflis/Floflis-DNA/releases/download/071/Floflis.DNA.tar.gz).
 
-If you need the source, please don't directly download the source as zip/tar.gz; clone it. (you can download as compressed file, but you will need manual work to update Floflis).
+If you need the source, please don't directly download the source; clone it. (you can download as compressed file, but you will need manual work to update Floflis).
 
 For more details, visit our [downloads page](https://floflis.github.io/download/).
 
