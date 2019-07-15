@@ -93,7 +93,8 @@ floflis update --github
 
 ## To do
 
-* as update module is moved, remove .git folder on init.sh / install.sh copy each file instead of all, except .git
+* as update module is moved, remove .git folder on init.sh
+* install.sh copy each file instead of all, except .git
 * init.sh shows the amount of disk space have been reduced
 * CHANGELOG
 * read OS info
