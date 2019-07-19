@@ -26,7 +26,7 @@ echo "[Y/n]"
 read gitormanual
 
 case gitormanual in
-   nN)
+   [nN])
       echo "Removing .git folder..."
       sudo rm -r .git
       echo "Removing update module..."
@@ -35,8 +35,7 @@ case gitormanual in
    
    *)
       echo "$ok" ;;
-
-
+esac
 echo "${dna_ascii}"
 
 echo "Do you know how to turn off/restart/suspend Linux?"
@@ -52,7 +51,7 @@ case $keepenergymod in
        echo "${ok}" ;;
    *)
        echo "${ok}" ;;
-
+esac
 echo "${dna_ascii}"
 
 echo "Floflis DNA contains README.md, LICENSE, CONTRIBUTING, DISCLAIMER and CODE_OF_CONDUCT."
@@ -66,26 +65,27 @@ read keepdocumentation
 #   echo "${ok}"
 # fi
 echo "${dna_ascii}"
-   echo "License with disclaimer:" && echo ""
-   cat LICENSE && echo ""
-   echo "${dna_ascii}"
-   
-   echo "Before removing documentation..."
-   echo "Do you agree with the license and the disclaimer? Please scroll up to read."
-   echo "PLEASE READ AND WRITE CAREFULLY!"
-   echo "Do you agree to the license? [Y/n]"
-   read licenseagreement
-   if [ "${licenseagreement}" = "y" ] || ["${licenseagreement}" = "Y"]; then
+echo "License with disclaimer:" && echo ""
+cat LICENSE && echo ""
+echo "${dna_ascii}"
+
+echo "Before removing documentation..."
+echo "Do you agree with the license and the disclaimer? Please scroll up to read."
+echo "PLEASE READ AND WRITE CAREFULLY!"
+echo "Do you agree to the license? [Y/n]"
+read licenseagreement
+case $licenseagreement in
+   [nN])
+      echo "You need to agree to the license in order to use Floflis!"
+      exit ;;
+   *)
       echo "Removing README.md" && sudo rm README.md
       echo "Removing LICENSE file" && sudo rm LICENSE
       echo "Removing CONTRIBUTING file" && sudo rm CONTRIBUTING
       echo "Removing DISCLAIMER file" && sudo rm DISCLAIMER
       echo "Removing CODE_OF_CONDUCT.md" && sudo rm CODE_OF_CONDUCT.md
-      echo "Removing information-reader module" && sudo rm modules/information-reader
-   fi
-   else
-      exit
-   fi
+      echo "Removing information-reader module" && sudo rm modules/information-reader ;;
+esac
    
 echo "${dna_ascii}"
 
