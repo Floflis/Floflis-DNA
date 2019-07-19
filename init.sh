@@ -79,15 +79,15 @@ case $licenseagreement in
       echo "You need to agree to the license in order to use Floflis!"
       exit ;;
    *)
-      echo "Removing README.md" && sudo rm README.md
-      echo "Removing LICENSE file" && sudo rm LICENSE
-      echo "Removing CONTRIBUTING file" && sudo rm CONTRIBUTING
-      echo "Removing DISCLAIMER file" && sudo rm DISCLAIMER
-      echo "Removing CODE_OF_CONDUCT.md" && sudo rm CODE_OF_CONDUCT.md
-      echo "Removing information-reader module" && sudo rm modules/information-reader ;;
+      echo "Removing README.md" && rm README.md
+      echo "Removing LICENSE file" && rm LICENSE
+      echo "Removing CONTRIBUTING file" && rm CONTRIBUTING
+      echo "Removing DISCLAIMER file" && rm DISCLAIMER
+      echo "Removing CODE_OF_CONDUCT.md" && rm CODE_OF_CONDUCT.md
+      echo "Removing information-reader module" && rm modules/information-reader ;;
 esac
    
 echo "${dna_ascii}"
 
-echo "Done! Now, you can move this folder to the device you want to install Floflis, and run install.sh using 'sudo chmod 755 install.sh && sudo ./install.sh' command (without quotes)."
+echo "Done! Now, you can move this folder to the device you want to install Floflis, and run install.sh using 'sudo chmod +x install.sh && sudo ./install.sh' command (without quotes)."
 sudo rm init.sh
