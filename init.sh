@@ -10,6 +10,8 @@ read -r -d '' dna_ascii << "EOF"
 ~   `-~ `-`   `-~ `-`   `-~ `-
 
 EOF
+echo "${dna_ascii}"
+
 echo "Welcome! Before adding that folder (Floflis DNA) to your device, we need to configure the install, to make it more lightweight."
 echo ""
 echo "We will ask some questions and configure according to your answers. Please reply by typing y/n (according to your choice) and press [ENTER]."
