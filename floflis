@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # load definitions & settings
 source /usr/lib/floflis/layers/dna/config

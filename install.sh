@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 read -r -d '' dna_ascii <<EOF
  
