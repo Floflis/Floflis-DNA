@@ -93,24 +93,21 @@ floflis update --github
 
 ## To do
 
-* link to blog
-* downloads page
-* packaged release
-* update from GitLab
-* script to remove proprietary blobs from kernel
+* as update module is moved, remove .git folder on init.sh
+* install.sh copy each file instead of all, except .git
+* init.sh shows the amount of disk space have been reduced
+* CHANGELOG
+* read OS info
+* build watermark
+* saved commands
+* `flo` shorter command
+* upgrade to Core
+
 * list the biggest programs/packages
 * remove bloatware
-* init.sh shows the amount of disk space have been reduced
 * download updates from a Core+ device, apply to a DNA device
-* upgrade to Core
-* saved commands
 * themes
 * receive updates from native dat (when it is available)
-* install CLI software from Substratum and other layers
-* `floflis update -h` command
-* modules as git submodules?
-* CHANGELOG
 * GitLab releases
 * Dat releases
 * ZN releases
-* Improved updater, with update script
