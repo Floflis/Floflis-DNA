@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 
 # load definitions & settings
-source /usr/sbin/layers/dna/config
+source /usr/lib/floflis/layers/dna/config
 
 # shows presentation if user just types 'floflis':
 if [ "$1" = "" ]; then
@@ -56,19 +56,19 @@ fi
 # load modules
 # -
 # information-reader
-if [ -e /usr/sbin/layers/dna/modules/information-reader ]
+if [ -e /usr/lib/floflis/layers/dna/modules/information-reader ]
 then
-    source /usr/sbin/layers/dna/modules/information-reader
+    source /usr/lib/floflis/layers/dna/modules/information-reader
 fi
 # energyupdate
-if [ -e /usr/sbin/layers/dna/modules/energy ]
+if [ -e /usr/lib/floflis/layers/dna/modules/energy ]
 then
-    source /usr/sbin/layers/dna/modules/energy
+    source /usr/lib/floflis/layers/dna/modules/energy
 fi
 # update
-if [ -e /usr/sbin/layers/dna/modules/update ]
+if [ -e /usr/lib/floflis/layers/dna/modules/update ]
 then
-    source /usr/sbin/layers/dna/modules/update
+    source /usr/lib/floflis/layers/dna/modules/update
 fi
 
 # todo:support updates if Dat is installed

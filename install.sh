@@ -1,10 +1,18 @@
-#!/bin/bash
-cat << "EOF"
+#!/bin/sh
+
+read -r -d '' dna_ascii <<EOF
+ 
 -. .-.   .-. .-.   .-. .-.   .
   \   \ /   \   \ /   \   \ /
  / \   \   / \   \   / \   \
 ~   `-~ `-`   `-~ `-`   `-~ `-
-  _            _           
+
+EOF
+
+echo "${dna_ascii}"
+
+cat << EOF  
+  _            _
  |_  |   _   _|_  |  o   _ 
  |   |  (_)   |   |  |  _> 
                            
@@ -15,51 +23,32 @@ cat << "EOF"
 
 EOF
 
-if [ -e /usr/sbin/layers/dna/LICENSE ]
-then
-   cat << "EOF"
+echo "${dna_ascii}"
+echo "License with disclaimer:" && echo ""
+cat LICENSE && echo ""
 
--. .-.   .-. .-.   .-. .-.   .
-  \   \ /   \   \ /   \   \ /
- / \   \   / \   \   / \   \
-~   `-~ `-`   `-~ `-`   `-~ `-
-
-EOF
-   echo "License with disclaimer:" && echo ""
-   cat LICENSE && echo ""
-   cat << "EOF"
-
--. .-.   .-. .-.   .-. .-.   .
-  \   \ /   \   \ /   \   \ /
- / \   \   / \   \   / \   \
-~   `-~ `-`   `-~ `-`   `-~ `-
-
-EOF
-   echo "Do you agree with the license and the disclaimer? Please scroll up to read."
-   echo "PLEASE READ AND WRITE CAREFULLY!"
-   echo "1 = YES, I agree with the LICENSE and the DISCLAIMER"
-   echo "2 = NO, I do not agree"
-   echo "Please reply by typping a number (according to your choice) and press [ENTER]"
+echo "${dna_ascii}"
+echo "Do you agree with the license and the disclaimer? Please scroll up to read [Y/n]"
+while true; do
    read licenseagreement
-   if [ "$licenseagreement" = "1" ]; then
-      echo "Ok, thank you."
-fi
-   if [ "$licenseagreement" = "2" ]; then
-      exit
-fi
+   case $licenseagreement in
+       [nN])
+	   exit ;;
+       [yY])
+	   echo "Ok"
 fi
 
-echo "- Installing Floflis in /usr/sbin..."
-sudo cat > /usr/sbin/floflis << ENDOFFILE
+echo "- Installing Floflis in /usr/bin..."
+sudo cat > /usr/bin/floflis << ENDOFFILE
 #!/bin/bash
-source /usr/sbin/layers/dna/floflis
+source /usr/bin/layers/dna/floflis
 ENDOFFILE
 echo "- Creating Floflis' Layers folder..."
-sudo mkdir /usr/sbin/layers
-echo "- Creating folder for Floflis' DNA in /usr/sbin/layers..."
-sudo mkdir /usr/sbin/layers/dna
+mkdir -p /usr/lib/floflis/layers
+echo "- Creating folder for Floflis' DNA in /usr/lib/floflis/layers..."
+mkdir -p /usr/lib/floflis/layers/dna
 echo "- Installing Floflis' DNA..."
-sudo cp -r --preserve=all . /usr/sbin/layers/dna
+cp -r --preserve=all . /usr/lib/floflis/layers/dna
 echo "- Turning Floflis into a executable..."
-sudo chmod 755 /usr/sbin/floflis
+chmod 755 /usr/bin/floflis
 echo "(✓) Successfully installed. Just type 'floflis' (without quotes) and hit 'enter' button to open it."

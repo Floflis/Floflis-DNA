@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
    echo "Updates:"
    echo "   update (--gitlab, --github) Updates Floflis DNA (centralized, yet)"
@@ -20,7 +20,7 @@ if [ "$1" = "update" ]; then
    if [ "$2" = "gitlab" ] || [ "$2" = "--gitlab" ]; then
       echo "- Updating Floflis DNA (from GitLab)..."
       echo "(i) Updating a Layer requires sudo mode;"
-      cd /usr/sbin/layers/dna && sudo git pull origin master
+      cd /usr/lib/floflis/layers/dna && sudo git pull origin master
 #      echo "(✓) Successfully updated Floflis DNA."
 fi
    if [ "$2" = "github" ] || [ "$2" = "--github" ]; then
@@ -40,7 +40,7 @@ fi
       if [ "$microsoftyes" = "1" ]; then
          echo "If you receive a blue screen, don't blame on us." && echo "- Updating Floflis DNA (from Microsoft GitHub)..."
          echo "(i) Updating a Layer requires sudo mode;"
-         cd /usr/sbin/layers/dna
+         cd /usr/lib/floflis/layers/dna
          sudo git pull github master
 fi
 fi

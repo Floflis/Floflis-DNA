@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
    echo "Power/energy:"
    echo "   shutdown, shu, off          Shutdown/power-off Floflis"
@@ -7,11 +7,11 @@ if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
 fi
 
 if [ "$1" = "poweroff" ] || [ "$1" = "off" ] || [ "$1" = "shutdown" ] || [ "$1" = "shu" ]; then
-   systemctl poweroff
+   sudo poweroff
 fi
 
 if [ "$1" = "reboot" ] || [ "$1" = "restart" ] || [ "$1" = "res" ]; then
-   systemctl reboot
+   sudo reboot
 fi
 # todo:if command is "reset" or "refresh", ask
 

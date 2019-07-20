@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
 #todo:
 #  echo "   license                     Shows Floflis' license file"
@@ -23,5 +23,5 @@ fi
 
 if [ "$1" = "codeofconduct" ] || [ "$1" = "conductcode" ] || [ "$1" = "coc" ] || [ "$1" = "--coc" ]; then
    echo "Floflis' Code of Conduct:"
-   cat /usr/sbin/layers/dna/CODE_OF_CONDUCT.md
+   cat /usr/lib/floflis/layers/dna/CODE_OF_CONDUCT.md
 fi
