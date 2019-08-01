@@ -55,7 +55,7 @@ If you wish to remove the updates module (which includes .git folder), please co
 Inside the clonned/downloaded extracted folder, open Terminal and type the following:
 
 ```sh
-sudo chmod 755 init.sh && sudo ./init.sh
+sudo chmod 755 init.sh && sudo sh ./init.sh
 ```
 
 Respond to questions and the script will configure the installer for you.
@@ -66,7 +66,7 @@ After done, you can move the `Floflis DNA` folder to your device.
 Assuming `Floflis DNA` folder is on the target device, run the following command inside this folder:
 
 ```sh
-sudo chmod +x install.sh && sudo ./install.sh
+sudo chmod +x install.sh && sudo sh ./install.sh
 ```
 
 

@@ -1,49 +1,51 @@
 #!/bin/sh
 # . config
 
-read -r -d '' dna_ascii <<EOF
- 
--. .-.   .-. .-.   .-. .-.   .
-  \   \ /   \   \ /   \   \ /
- / \   \   / \   \   / \   \
-~   `-~ `-`   `-~ `-`   `-~ `-
-
-EOF
-
-echo "${dna_ascii}"
-
-cat << EOF  
-  _            _           
- |_  |   _   _|_  |  o   _ 
- |   |  (_)   |   |  |  _> 
-                           
-  ___               _            _   _             
- |_ _|  _ _    ___ | |_   __ _  | | | |  ___   _ _ 
-  | |  | ' \  (_-< |  _| / _` | | | | | / -_) | '_|
- |___| |_||_| /__/  \__| \__,_| |_| |_| \___| |_|  
-
-                  for Floflis DNA
-EOF
+#dna_ascii="""
+# 
+#-. .-.   .-. .-.   .-. .-.   .
+#  \   \ /   \   \ /   \   \ /
+# / \   \   / \   \   / \   \
+#~   `-~ `-`   `-~ `-`   `-~ `-
+#
+#"""
+#
+#echo "$dna_ascii"
+#
+#installerlogo="""
+#
+#  _            _           
+# |_  |   _   _|_  |  o   _ 
+# |   |  (_)   |   |  |  _> 
+#                           
+#  ___               _            _   _             
+# |_ _|  _ _    ___ | |_   __ _  | | | |  ___   _ _ 
+#  | |  | ' \  (_-< |  _| / _` | | | | | / -_) | '_|
+# |___| |_||_| /__/  \__| \__,_| |_| |_| \___| |_|  
+#
+#                  for Floflis DNA
+#
+#"""
 
 echo "${dna_ascii}"
 echo "License with disclaimer:" && echo ""
 cat LICENSE && echo ""
 
 if [ -e LICENSE ]
-then
-   echo "${dna_ascii}"
-   echo "License with disclaimer:" && echo ""
-   cat LICENSE && echo ""
-   echo "${dna_ascii}"
-   echo "Scroll up to read. PLEASE READ/WRITE CAREFULLY!"
-   echo "Do you agree with the license and the disclaimer? [Y/n]"
-   while true; do
-      read licenseagreement
-      case $licenseagreement in
-         [nN])
-            exit ;;
-         [yY])
-            echo "Ok"
+   then
+      echo "${dna_ascii}"
+      echo "License with disclaimer:" && echo ""
+      cat LICENSE && echo ""
+      echo "${dna_ascii}"
+      echo "Scroll up to read. PLEASE READ/WRITE CAREFULLY!"
+      echo "Do you agree with the license and the disclaimer? [Y/n]"
+         read licenseagreement
+         case $licenseagreement in
+            [nN])
+               exit ;;
+            [yY])
+               echo "Ok"
+         esac
 fi
 
 echo "- Installing Floflis in /usr/bin..."
@@ -70,7 +72,6 @@ ENDOFFILE
    *)
       echo "${invalid}" ;;
 esac
-done
 
 echo "- Creating Floflis' Layers folder..."
 mkdir -p /usr/lib/floflis/layers
@@ -89,7 +90,7 @@ then
       echo "- Preparing to install Core layer..."
       sudo mv -f /usr/lib/floflis/layers/dna/layers/core /usr/lib/floflis/layers
       echo "- Openning Floflis Core installer..."
-      cd /usr/lib/floflis/layers/core && sudo chmod 755 core && ./core
+      cd /usr/lib/floflis/layers/core && sudo chmod 755 core && sh ./core
 fi
 # Core>
 fi
@@ -99,7 +100,7 @@ chmod 755 /usr/bin/floflis && sudo chmod +x /usr/bin/floflis
 if [ -e /usr/sbin/floflis ]
    then
       echo "- Floflis build 071 detected. It uses a old folder structure. Fixing..."
-      sudo rm -f /usr/sbin/layers && sudo rm -f /usr/sbin/floflis
+      sudo rm -f -r /usr/sbin/layers && sudo rm -f /usr/sbin/floflis
 fi
 
 # supports 'flo' short command

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-< --------------------- take extra attention, ensure compatibility on init and install ------------
+# < --------------------- take extra attention, ensure compatibility on init and install ------------
 
 # load definitions & settings
 source /usr/lib/floflis/layers/dna/config
@@ -13,7 +13,7 @@ source /usr/lib/floflis/layers/dna/config
       flo="floflis"
 fi
 
---------------------- take extra attention, ensure compatibility on init and install ------------ >
+# --------------------- take extra attention, ensure compatibility on init and install ------------ >
 
 versionshow="        \e[101m $osname \e[0m\e[100m build $osbuild \e[0m"
 
