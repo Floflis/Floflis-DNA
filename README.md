@@ -54,7 +54,7 @@ If you wish to remove the updates module (which includes .git folder), please co
 
 Inside the clonned/downloaded extracted folder, open Terminal and type the following:
 
-```bash
+```sh
 sudo chmod 755 init.sh && sudo ./init.sh
 ```
 
@@ -65,9 +65,10 @@ After done, you can move the `Floflis DNA` folder to your device.
 
 Assuming `Floflis DNA` folder is on the target device, run the following command inside this folder:
 
-```bash
-sudo chmod 755 install.sh && sudo ./install.sh
+```sh
+sudo chmod +x install.sh && sudo ./install.sh
 ```
+
 
 Insert your password, and Floflis will be installed.
 
@@ -75,34 +76,54 @@ Insert your password, and Floflis will be installed.
 
 Update from P2P network (not available yet in DNA):
 
-```bash
+```sh
 floflis update
 ```
 
 Update from GitLab (not working yet because GitLab is asking for login, and they didn't replied yet to our issue):
 
-```bash
+```sh
 floflis update --gitlab
 ```
 
 Update from GitHub:
 
-```bash
+```sh
 floflis update --github
 ```
 
+* install.sh: ask to install `flo` shorter command
+
+* install.sh: detect attached layers and install them
+
+* Presentation appears different according to layer
+* Upgrade to Core
+* Displays OS name and its build on presentation
+* Command to show its version
+* CHANGELOG.md
+
+* information-reader: read CHANGELOG.md
+
+* (fix) install.sh: only show license/disclaimer if reader module is available (license/disclaimer is considered as already agreed when user explicitly agrees and removes information-reader module)
+
+* installer.sh: removes install.sh from installed folder
+
+* Floflis DNA installer runs Core's own installer
+
+* Fit the FHS (https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard) - also fixes bug with build 071, that isn't installing floflis executable
+* Removed redundant sudo
+* Changed license to GPLv3
+* Replace BASH to sh
+* A lot of minor code fixes
+
+* Detect build 071, and update it
+
 ## To do
 
-* as update module is moved, remove .git folder on init.sh
-* install.sh copy each file instead of all, except .git
+* update Floflis DNA from local network device
 * init.sh shows the amount of disk space have been reduced
-* CHANGELOG
-* read OS info
-* build watermark
-* saved commands
-* `flo` shorter command
-* upgrade to Core
-
+* append DNA changelog with Core changelog
+* saved commands (`git add . && git commit -m "Update README.md" && git push origin && git push github` | `ssh chat.shazow.net` | `sudo apt update && sudo apt upgrade -y && sudo apt-get -y install swig3.0 python3-dev python3-pip build-essential cmake pkg-config libssl-dev libffi-dev libhwloc-dev libboost-dev && sudo apt update`)
 * list the biggest programs/packages
 * remove bloatware
 * download updates from a Core+ device, apply to a DNA device
@@ -111,3 +132,8 @@ floflis update --github
 * GitLab releases
 * Dat releases
 * ZN releases
+* suggest to download upgrade from Dat/IPFS
+* remove/uninstall modules and features, such as `flo`
+* upgrade module instead of relying on `floflis` (install.sh will also use it)
+* modular changelog
+* detect a installation that were canceled without user asking

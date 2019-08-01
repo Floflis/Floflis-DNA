@@ -1,0 +1,6 @@
+#!/bin/sh
+osname="Floflis 0"
+osbuild="072"
+layer="dna"
+nxtlayer="core"
+# install="new" # new, ok

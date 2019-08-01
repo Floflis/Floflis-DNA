@@ -1,5 +1,0 @@
-#!/bin/bash
-layer="dna"
-desired="dna"
-desiredincluded="self" # self, no, yes
-install="new" # new, ok
