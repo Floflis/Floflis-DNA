@@ -1,31 +1,29 @@
 #!/bin/sh
 # . config
 
-#dna_ascii="""
-# 
-#-. .-.   .-. .-.   .-. .-.   .
-#  \   \ /   \   \ /   \   \ /
-# / \   \   / \   \   / \   \
-#~   `-~ `-`   `-~ `-`   `-~ `-
+dna_ascii=""" 
+-. .-.   .-. .-.   .-. .-.   .
+  \   \ /   \   \ /   \   \ /
+ / \   \   / \   \   / \   \
+~   `-~ `-`   `-~ `-`   `-~ `-
+"""
 #
-#"""
+echo "${dna_ascii}"
 #
-#echo "$dna_ascii"
-#
-#installerlogo="""
-#
-#  _            _           
-# |_  |   _   _|_  |  o   _ 
-# |   |  (_)   |   |  |  _> 
-#                           
-#  ___               _            _   _             
-# |_ _|  _ _    ___ | |_   __ _  | | | |  ___   _ _ 
-#  | |  | ' \  (_-< |  _| / _` | | | | | / -_) | '_|
-# |___| |_||_| /__/  \__| \__,_| |_| |_| \___| |_|  
-#
-#                  for Floflis DNA
-#
-#"""
+cat << "EOF"
+
+  _            _           
+ |_  |   _   _|_  |  o   _ 
+ |   |  (_)   |   |  |  _> 
+                           
+  ___               _            _   _             
+ |_ _|  _ _    ___ | |_   __ _  | | | |  ___   _ _ 
+  | |  | ' \  (_-< |  _| / _` | | | | | / -_) | '_|
+ |___| |_||_| /__/  \__| \__,_| |_| |_| \___| |_|  
+
+                  for Floflis DNA
+
+EOF
 
 echo "${dna_ascii}"
 echo "License with disclaimer:" && echo ""
@@ -51,7 +49,8 @@ fi
 echo "- Installing Floflis in /usr/bin..."
 sudo cat > /usr/bin/floflis << ENDOFFILE
 #!/bin/sh
-source /usr/bin/layers/dna/floflis
+
+source /usr/lib/floflis/layers/dna/floflis.sh
 ENDOFFILE
 
 echo "Do you want to install Floflis' (flo alongside floflis) simplified command? [Y/n]"
@@ -64,7 +63,8 @@ case $insflo in
       echo "- Installing flo command in /usr/bin..."
       sudo cat > /usr/bin/flo << ENDOFFILE
 #!/bin/sh
-. floflis
+
+source /usr/lib/floflis/layers/dna/floflis.sh
 ENDOFFILE
       echo "- Turning flo command into a executable..."
       sudo chmod 755 /usr/bin/flo && sudo chmod +x /usr/bin/flo

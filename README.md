@@ -55,7 +55,7 @@ If you wish to remove the updates module (which includes .git folder), please co
 Inside the clonned/downloaded extracted folder, open Terminal and type the following:
 
 ```sh
-sudo chmod 755 init.sh && sudo sh ./init.sh
+sudo chmod +x init.sh && sudo sh ./init.sh
 ```
 
 Respond to questions and the script will configure the installer for you.
@@ -93,30 +93,29 @@ floflis update --github
 ```
 
 * install.sh: ask to install `flo` shorter command
+* Displays OS name and its build on presentation
+* Command to show its version
+* CHANGELOG.md
+* information-reader: read CHANGELOG.md
+* installer.sh: removes install.sh from installed folder
+* Fit the FHS (https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard) - also fixes bug with build 071, that isn't installing floflis executable
+* Removed redundant sudo
+* Replace BASH to sh
+* A lot of minor code fixes
+* Detect build 071, and update it
+
+* Changed license to GPLv3
 
 * install.sh: detect attached layers and install them
 
 * Presentation appears different according to layer
 * Upgrade to Core
-* Displays OS name and its build on presentation
-* Command to show its version
-* CHANGELOG.md
-
-* information-reader: read CHANGELOG.md
 
 * (fix) install.sh: only show license/disclaimer if reader module is available (license/disclaimer is considered as already agreed when user explicitly agrees and removes information-reader module)
 
-* installer.sh: removes install.sh from installed folder
+
 
 * Floflis DNA installer runs Core's own installer
-
-* Fit the FHS (https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard) - also fixes bug with build 071, that isn't installing floflis executable
-* Removed redundant sudo
-* Changed license to GPLv3
-* Replace BASH to sh
-* A lot of minor code fixes
-
-* Detect build 071, and update it
 
 ## To do
 
@@ -137,3 +136,4 @@ floflis update --github
 * upgrade module instead of relying on `floflis` (install.sh will also use it)
 * modular changelog
 * detect a installation that were canceled without user asking
+* tell when install.sh isn`t exec as root

@@ -32,7 +32,7 @@ read keepenergymod
 case $keepenergymod in
    [nN])
        echo "Removing energy module..."
-       rm modules/energy
+       rm modules/energy.sh
        echo "${ok}"
        break ;;
    [yY])
@@ -71,7 +71,7 @@ case $licenseagreement in
       echo "Removing CONTRIBUTING file" && rm CONTRIBUTING
       echo "Removing DISCLAIMER file" && rm DISCLAIMER
       echo "Removing CODE_OF_CONDUCT.md" && rm CODE_OF_CONDUCT.md
-      echo "Removing information-reader module" && rm modules/information-reader
+      echo "Removing information-reader module" && rm modules/information-reader.sh
       break ;;
    *)
       echo "${invalid}" ;;

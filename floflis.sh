@@ -3,7 +3,7 @@
 # < --------------------- take extra attention, ensure compatibility on init and install ------------
 
 # load definitions & settings
-source /usr/lib/floflis/layers/dna/config
+source /usr/lib/floflis/layers/dna/config.sh
 
 # supports 'flo' short command
    if [ -e /usr/bin/flo ]
@@ -20,7 +20,7 @@ versionshow="        \e[101m $osname \e[0m\e[100m build $osbuild \e[0m"
 # shows presentation if user just types 'floflis':
 # shows presentation if user just types 'floflis/flo':
 if [ "$1" = "" ]; then
-   cat /usr/lib/floflis/layers/$layer/presentation
+   cat /usr/lib/floflis/layers/$layer/presentation.sh
    echo -e "$versionshow"
    echo "Type '$flo --help' (without quotes) to see a list of available commands."
    if [ -e /usr/sbin/floflis ]
@@ -58,19 +58,19 @@ fi
 # load modules
 # -
 # information-reader
-if [ -e /usr/lib/floflis/layers/dna/modules/information-reader ]
+if [ -e /usr/lib/floflis/layers/dna/modules/information-reader.sh ]
 then
-    source /usr/lib/floflis/layers/dna/modules/information-reader
+    . /usr/lib/floflis/layers/dna/modules/information-reader.sh
 fi
 # energy
-if [ -e /usr/lib/floflis/layers/dna/modules/energy ]
+if [ -e /usr/lib/floflis/layers/dna/modules/energy.sh ]
 then
-    source /usr/lib/floflis/layers/dna/modules/energy
+    . /usr/lib/floflis/layers/dna/modules/energy.sh
 fi
 # update / build 081 will move to Core
-if [ -e /usr/lib/floflis/layers/dna/modules/update ]
+if [ -e /usr/lib/floflis/layers/dna/modules/update.sh ]
 then
-    source /usr/lib/floflis/layers/dna/modules/update
+    . /usr/lib/floflis/layers/dna/modules/update.sh
 fi
 # load information and modules from layers
 # -
@@ -78,7 +78,7 @@ fi
 if [ -e /usr/lib/floflis/layers/core ]
 then
     layernm="Floflis Core"
-    source /usr/lib/floflis/layers/core/floflis
+    . /usr/lib/floflis/layers/core/floflis.sh
 else
     layernm="Floflis DNA"
 fi
@@ -153,7 +153,7 @@ EOF
          echo "- Upgrading to Core layer from GitLab..."
          cd /usr/lib/floflis/layers
          sudo git clone https://gitlab.com/Floflis/Floflis-Core.git core
-         sudo sed -i 's/dna/core/g' /usr/lib/floflis/layers/dna/config
+         sudo sed -i 's/dna/core/g' /usr/lib/floflis/layers/dna/config.sh
          echo "(✓) Floflis DNA has been upgraded to Floflis Core." && exit
 fi
 fi
