@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ok="Ok, going to the next question."
 invalid="Please enter a valid input"

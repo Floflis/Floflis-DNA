@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
    echo "Updates:"
    echo "   update (--gitlab, --github) Updates Floflis dna (centralized, yet)"

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # . config
 
 dna_ascii=""" 
@@ -48,9 +48,9 @@ fi
 
 echo "- Installing Floflis in /usr/bin..."
 sudo cat > /usr/bin/floflis << ENDOFFILE
-#!/bin/sh
+#!/bin/bash
 
-source /usr/lib/floflis/layers/dna/floflis.sh
+source /usr/lib/floflis/layers/dna/floflis
 ENDOFFILE
 
 echo "Do you want to install Floflis' (flo alongside floflis) simplified command? [Y/n]"
@@ -62,9 +62,9 @@ case $insflo in
    [yY])
       echo "- Installing flo command in /usr/bin..."
       sudo cat > /usr/bin/flo << ENDOFFILE
-#!/bin/sh
+#!/bin/bash
 
-source /usr/lib/floflis/layers/dna/floflis.sh
+source /usr/lib/floflis/layers/dna/floflis
 ENDOFFILE
       echo "- Turning flo command into a executable..."
       sudo chmod 755 /usr/bin/flo && sudo chmod +x /usr/bin/flo

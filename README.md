@@ -80,7 +80,7 @@ Update from P2P network (not available yet in DNA):
 floflis update
 ```
 
-Update from GitLab (not working yet because GitLab is asking for login, and they didn't replied yet to our issue):
+Update from GitLab:
 
 ```sh
 floflis update --gitlab
@@ -92,33 +92,14 @@ Update from GitHub:
 floflis update --github
 ```
 
-* install.sh: ask to install `flo` shorter command
-* Displays OS name and its build on presentation
-* Command to show its version
-* CHANGELOG.md
-* information-reader: read CHANGELOG.md
-* installer.sh: removes install.sh from installed folder
-* Fit the FHS (https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard) - also fixes bug with build 071, that isn't installing floflis executable
-* Removed redundant sudo
-* Replace BASH to sh
-* A lot of minor code fixes
-* Detect build 071, and update it
-
-* Changed license to GPLv3
-
-* install.sh: detect attached layers and install them
-
-* Presentation appears different according to layer
-* Upgrade to Core
-
-* (fix) install.sh: only show license/disclaimer if reader module is available (license/disclaimer is considered as already agreed when user explicitly agrees and removes information-reader module)
-
-
-
-* Floflis DNA installer runs Core's own installer
-
 ## To do
 
+* don't say on script it is success without reading output from script (for example, "fatal: unable to access 'https://gitlab.com/Floflis/Floflis-DNA.git/': Could not resolve host: gitlab.com")
+* if "sudo: git: command not found" install git
+* install.sh: detect attached layers and install them
+* Upgrade to Core
+* (fix) install.sh: only show license/disclaimer if reader module is available (license/disclaimer is considered as already agreed when user explicitly agrees and removes information-reader module)
+* Floflis DNA installer runs Core's own installer
 * update Floflis DNA from local network device
 * init.sh shows the amount of disk space have been reduced
 * append DNA changelog with Core changelog

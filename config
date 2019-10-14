@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 osname="Floflis 0"
 osbuild="072"
 layer="dna"

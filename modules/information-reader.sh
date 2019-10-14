@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
 #todo:
 #  echo "   license                     Shows Floflis' license file"
