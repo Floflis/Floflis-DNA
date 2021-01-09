@@ -1,0 +1,68 @@
+0000000000000000000000000000000000000000 e1c1596e00895bb42eb384427b7bfadf5bb043c1 Daniell Mesquita <daniellplasmmer@gmail.com> 1563659617 -0400	clone: from https://github.com/Floflis/Floflis-DNA.git
+e1c1596e00895bb42eb384427b7bfadf5bb043c1 a130333952ee588ffe53caca8e06a7893ac55a0b Daniell Mesquita <daniellplasmmer@gmail.com> 1563661427 -0400	commit: Pre-merge of previous commits
+a130333952ee588ffe53caca8e06a7893ac55a0b c04006c1c7fc8c2e951a965b77775520d3b25dc2 Daniell Mesquita <daniellplasmmer@gmail.com> 1563662291 -0400	commit (merge): Complement to previous commit
+c04006c1c7fc8c2e951a965b77775520d3b25dc2 6e65e1e67958de564cf55fd39001b8af1fed8467 Daniell Mesquita <daniellplasmmer@gmail.com> 1564616951 -0400	commit: Floflis 0 build 072
+6e65e1e67958de564cf55fd39001b8af1fed8467 c87c20911ed3255ac22bc9c7ccf970f65ee6f8be Daniell Mesquita <daniellplasmmer@gmail.com> 1564628006 -0400	commit: Floflis 0 build 072 update 1
+c87c20911ed3255ac22bc9c7ccf970f65ee6f8be 1a297ab79d9dfcd6e4477fe25090d15d87238dde Daniell Mesquita <daniellplasmmer@gmail.com> 1564630517 -0400	commit: Floflis 0 build 072 update 2
+1a297ab79d9dfcd6e4477fe25090d15d87238dde 8594300fdfce169ea60ab6d9ee83eb2723f83b77 Daniell Mesquita <daniellplasmmer@gmail.com> 1566763776 -0400	commit: Commit all shiommmit all shit
+8594300fdfce169ea60ab6d9ee83eb2723f83b77 ce6a49901c7aa8a404882e15e4c8e594feda2ad8 Daniell Mesquita <daniellplasmmer@gmail.com> 1571095383 -0400	commit: Build 072
+ce6a49901c7aa8a404882e15e4c8e594feda2ad8 5485c3522bf7ff7db8d89f308f985e345f90f636 Daniell Mesquita <daniellmesquita@protonmail.com> 1572207665 -0400	commit: Updates
+5485c3522bf7ff7db8d89f308f985e345f90f636 1b0aa29438d6f8f1e675fe49b15cec1ab0929d08 Daniell Mesquita <daniellmesquita@protonmail.com> 1572207696 -0400	commit: Updates
+1b0aa29438d6f8f1e675fe49b15cec1ab0929d08 c37d1a1e6425f1afb33fc515a5eaa4d5ad5e3480 Daniell Mesquita <daniellmesquita@protonmail.com> 1573778292 -0500	commit: Tasks.txt
+c37d1a1e6425f1afb33fc515a5eaa4d5ad5e3480 2e42bd114f3f43c3a3ce1ce52167ae7b642342fb Daniell Mesquita <daniellmesquita@protonmail.com> 1575434146 -0500	commit: Initial work for Floflis as init program
+2e42bd114f3f43c3a3ce1ce52167ae7b642342fb 787ee6eafa9acef443bb71c0a236917b5d4a378a Daniell Mesquita <daniellmesquita@protonmail.com> 1575594828 -0500	commit: Floflis init script (run Floflis on boot screen)
+787ee6eafa9acef443bb71c0a236917b5d4a378a f3cf873cbbebf45341e78d3fb3dc20a02ef81161 Daniell Mesquita <daniellmesquita@protonmail.com> 1575594911 -0500	commit: Updates
+f3cf873cbbebf45341e78d3fb3dc20a02ef81161 3f469f617d9369ff72ac68c6e0d396c2665fd769 Daniell Mesquita <daniellmesquita@protonmail.com> 1575595017 -0500	commit: Update tasks.txt
+3f469f617d9369ff72ac68c6e0d396c2665fd769 4c6d9ac2e880797345052728793281856aa4f37b Daniell Mesquita <daniellmesquita@protonmail.com> 1575595085 -0500	commit: Update Tasks.txt
+4c6d9ac2e880797345052728793281856aa4f37b 1e3157346ebbb738b49f78dea21b8b1bfd7ccc07 Daniell Mesquita <daniellmesquita@protonmail.com> 1575595644 -0500	commit: Update Tasks.txt
+1e3157346ebbb738b49f78dea21b8b1bfd7ccc07 9e0234cfbfec8838281f7c44ec622e7cf2f6452f Daniell Mesquita <daniellmesquita@protonmail.com> 1575596435 -0500	commit: Install Floflis init before Core install
+9e0234cfbfec8838281f7c44ec622e7cf2f6452f ff874c6e41740e5cd8672611c89091f5a9885369 Daniell Mesquita <daniellmesquita@protonmail.com> 1575596973 -0500	commit: fix install.sh
+ff874c6e41740e5cd8672611c89091f5a9885369 36e9010e00d14b0205e71248590314a8b7d31fbd Daniell Mesquita <daniellmesquita@protonmail.com> 1575598094 -0500	commit: Moved task to Plugz repo
+36e9010e00d14b0205e71248590314a8b7d31fbd ae81362290859931445d3057037edba31f58b37d Daniell Mesquita <daniellmesquita@protonmail.com> 1575598814 -0500	commit: Updates, move tasks to Core layer
+ae81362290859931445d3057037edba31f58b37d 08b28da3041fa3e640dd1c7cd47e14806328e5c5 Daniell Mesquita <daniellmesquita@protonmail.com> 1575930866 -0500	commit: Upgradeable to Floflis Soil
+08b28da3041fa3e640dd1c7cd47e14806328e5c5 771e419d25dc08825fae3d0ce8b6e13ecf0705ce Daniell Mesquita <daniellmesquita@protonmail.com> 1575931404 -0500	commit: Update build version
+771e419d25dc08825fae3d0ce8b6e13ecf0705ce ece34d52692a54d1fc91183793810a720b3c258c Daniell Mesquita <daniellmesquita@protonmail.com> 1575931420 -0500	commit: Upgradeable to Floflis Grass
+ece34d52692a54d1fc91183793810a720b3c258c 26967133d325c6c4ee19dce0cd8607f0df07fe5b Daniell Mesquita <daniellmesquita@protonmail.com> 1575931692 -0500	commit: cname: eusoumafoca
+26967133d325c6c4ee19dce0cd8607f0df07fe5b 1a3cc520f55b2e39d9d0339641e27d74c2eb4ae6 Daniell Mesquita <daniellmesquita@protonmail.com> 1575931913 -0500	commit: Upgradeable to Floflis Base
+1a3cc520f55b2e39d9d0339641e27d74c2eb4ae6 82d8ceb496c8f88b77e84c96d1b7f048de9d3d80 Daniell Mesquita <daniellmesquita@protonmail.com> 1575932438 -0500	commit: Upgradeable to Floflis Home
+82d8ceb496c8f88b77e84c96d1b7f048de9d3d80 cfac1280eb9bd415380edb303427e7cde0ab1685 Daniell Mesquita <daniellmesquita@protonmail.com> 1575933530 -0500	commit: Upgradeable to Floflis Ultimate
+cfac1280eb9bd415380edb303427e7cde0ab1685 bf73b433a127f91a6c3d58f3407b6ae143a4797d Daniell Mesquita <daniellmesquita@protonmail.com> 1575933583 -0500	commit: Fix previous commit
+bf73b433a127f91a6c3d58f3407b6ae143a4797d 6123fcde75c0c7ba459c9c31cadd3a2367c4ae3e Daniell Mesquita <daniellmesquita@protonmail.com> 1575934097 -0500	commit: Upgradeable to Floflis Quantum
+6123fcde75c0c7ba459c9c31cadd3a2367c4ae3e bc424ee61643c17a03638f15b4dc0bc7f0fe8714 Daniell Mesquita <daniellmesquita@protonmail.com> 1575945236 -0500	commit: loads functions from other layers if present
+bc424ee61643c17a03638f15b4dc0bc7f0fe8714 88a1d6cea4f1f3f509f670eac7f9c5439dd2d4ef Daniell Mesquita <daniellmesquita@protonmail.com> 1575955111 -0500	commit: Updates
+88a1d6cea4f1f3f509f670eac7f9c5439dd2d4ef 4e2d48348b5374bca5216add2596718da8b2f33e Daniell Mesquita <daniellmesquita@protonmail.com> 1576041670 -0300	commit: fix after deleting .git when used init.sh
+4e2d48348b5374bca5216add2596718da8b2f33e fcb7034fc6b97145223984abbbf4f3bd8996cbc6 Daniell Mesquita <daniellmesquita@protonmail.com> 1576031420 -0500	commit: OPI License v2 1st draft
+fcb7034fc6b97145223984abbbf4f3bd8996cbc6 c110d27f004de65a167f32f09bedf4caf56e6e72 Daniell Mesquita <daniellmesquita@protonmail.com> 1576033577 -0500	commit: init.sh ask before proceeding
+c110d27f004de65a167f32f09bedf4caf56e6e72 4451e976cff24f2d040186d1afb716de10e3366f Daniell Mesquita <daniellmesquita@protonmail.com> 1576034623 -0500	commit: Supress init.sh in favor of Plugz
+4451e976cff24f2d040186d1afb716de10e3366f e59c0edaca788c276713f705c319e5525b9a1eb5 Daniell Mesquita <daniellmesquita@protonmail.com> 1576034751 -0500	commit: Complement previous commit
+e59c0edaca788c276713f705c319e5525b9a1eb5 a682d1d5aadd9847739a6874fc94a49ca33bfb49 Daniell Mesquita <daniellmesquita@protonmail.com> 1576035800 -0500	commit: dont close install.sh when user doesnt wants flo shorter cmd
+a682d1d5aadd9847739a6874fc94a49ca33bfb49 ec79e23d8f0517a89dd6c46e37c44be51a04e1ef Daniell Mesquita <daniellmesquita@protonmail.com> 1576041199 -0500	commit: update LICENSE
+ec79e23d8f0517a89dd6c46e37c44be51a04e1ef dd96efb13825126564336cacb6fd6bd2bba6204e Daniell Mesquita <daniellmesquita@protonmail.com> 1576064119 -0500	commit: Update Tasks.txt
+dd96efb13825126564336cacb6fd6bd2bba6204e cd11ae9385ebff0fc59c261d89d7db760f3fd020 Daniell Mesquita <daniellmesquita@protonmail.com> 1576462166 -0500	commit: rename Quantum to Planetary layer
+cd11ae9385ebff0fc59c261d89d7db760f3fd020 480211a5646a84e0724240d8e3063730d7d297b4 Daniell Mesquita <daniellmesquita@protonmail.com> 1576618704 -0500	commit: update LICENSE
+480211a5646a84e0724240d8e3063730d7d297b4 46c8c71975ab6fbf62f47c4890f99f1ec0d1e77e Daniell Mesquita <daniellmesquita@protonmail.com> 1576621504 -0500	commit: install floflis server from core when available
+46c8c71975ab6fbf62f47c4890f99f1ec0d1e77e 6b1ed51d124c7ab661295c154fa42681f5e3b1b4 Daniell Mesquita <daniellmesquita@protonmail.com> 1576626679 -0500	commit: remove /include/ folder from layers after installed
+6b1ed51d124c7ab661295c154fa42681f5e3b1b4 770ed4be8edc58905fdd9176e38f8b2e9ab7df0c Daniell Mesquita <daniellmesquita@protonmail.com> 1576626804 -0500	commit: dont show license twice
+770ed4be8edc58905fdd9176e38f8b2e9ab7df0c 8b154eb2d4913e8f64ed1bf8c47012591b83445a Daniell Mesquita <daniellmesquita@protonmail.com> 1576627619 -0500	commit: after installed Floflis Server, dont proceed installation
+8b154eb2d4913e8f64ed1bf8c47012591b83445a acebc40806e9dc9a5596aca253d26dc1142c24c9 Daniell Mesquita <daniellmesquita@protonmail.com> 1576627857 -0500	commit: tell user copying files can take several times to complete
+acebc40806e9dc9a5596aca253d26dc1142c24c9 88b13788d8a9e03e5fe4e5cc4d44ae5b2b80fd93 Daniell Mesquita <daniellmesquita@protonmail.com> 1576628079 -0500	commit: only tell user the install will take a while when a heavy layer is present
+88b13788d8a9e03e5fe4e5cc4d44ae5b2b80fd93 abe12d8297067aee04aaf1b0a0b12c9ecbc172b9 Daniell Mesquita <daniellmesquita@protonmail.com> 1576628369 -0500	commit: install floflis executable only after its required libraries are installed
+abe12d8297067aee04aaf1b0a0b12c9ecbc172b9 341d9b8987280be5b11146f74cf060d18a99089c Daniell Mesquita <daniellmesquita@protonmail.com> 1576630571 -0500	commit: Floflis Manifesto
+341d9b8987280be5b11146f74cf060d18a99089c 8f7f41fa9b02b9f8fa15905d3ec7188dcb88bff5 Daniell Mesquita <daniellmesquita@protonmail.com> 1576631854 -0500	commit: fix detection of floflis server, for not installing other layers
+8f7f41fa9b02b9f8fa15905d3ec7188dcb88bff5 c7219306edb98684120de98d34e766d4f5dd8588 Daniell Mesquita <daniellmesquita@protonmail.com> 1576632947 -0500	commit: update Manifesto
+c7219306edb98684120de98d34e766d4f5dd8588 09ac5cbca99749bb5186e11dd6a9afee2a4ed3da Daniell Mesquita <daniellmesquita@protonmail.com> 1576634226 -0500	commit: differentiate after installed Floflis and asking a question, for avoiding distractions
+09ac5cbca99749bb5186e11dd6a9afee2a4ed3da 8c99cda9ebba4615c28fd12e9b872c7058197b11 Daniell Mesquita <daniellmesquita@protonmail.com> 1577481468 -0500	commit: detect if root, don't use sudo if already
+8c99cda9ebba4615c28fd12e9b872c7058197b11 f040a56700a31df50a3175d8d1cc0dd7718e1c60 Daniell Mesquita <daniellmesquita@protonmail.com> 1577483217 -0500	commit: complement previous commit
+f040a56700a31df50a3175d8d1cc0dd7718e1c60 e206c9dd491100adad2069c570659003ae001854 Daniell Mesquita <daniellmesquita@protonmail.com> 1577490044 -0500	commit: layer name in begin of install script
+e206c9dd491100adad2069c570659003ae001854 0ef7f57e794abb69fdc38639714834df54374056 Daniell Mesquita <daniellplasmmer@gmail.com> 1578175086 -0300	commit: update msg
+0ef7f57e794abb69fdc38639714834df54374056 ce517983ac064ce1530c3beff34f8c821b2edeea Daniell Mesquita <daniellplasmmer@gmail.com> 1578175178 -0300	commit: update config (year, build version)
+ce517983ac064ce1530c3beff34f8c821b2edeea 0d30d35cf21d34ed08ffee71df13d38bc058eced Daniell Mesquita <daniellmesquita@protonmail.com> 1608517231 -0500	commit: update Tasks.txt
+0d30d35cf21d34ed08ffee71df13d38bc058eced 8b960af3898f0b5e24f3c504382b0cf7e08f6c22 Daniell Mesquita <daniellmesquita@protonmail.com> 1608517406 -0500	commit: Improved installer detecting layers
+8b960af3898f0b5e24f3c504382b0cf7e08f6c22 17a2da0dbe0c33e1bb88bf46b5bda1b602ccd945 Daniell Mesquita <daniellmesquita@protonmail.com> 1608517476 -0500	commit: New build/version
+17a2da0dbe0c33e1bb88bf46b5bda1b602ccd945 13b4661593f3622fce03b4be6f19a99090d67605 Daniell Mesquita <daniellmesquita@protonmail.com> 1608517530 -0500	commit: remove message about upgrading to next layer, as it isnt available yet
+13b4661593f3622fce03b4be6f19a99090d67605 10cdc09e470ae2720b2cc63cbc300d284462344a Daniell Mesquita <daniellmesquita@protonmail.com> 1609028697 -0300	commit: Update Tasks.txt
+10cdc09e470ae2720b2cc63cbc300d284462344a 81da55d3fa0adb1314b0c31dbe91677ae2e0da62 Daniell Mesquita <daniellmesquita@protonmail.com> 1609028766 -0300	commit: Detect Linux distro type (Ubuntu or AntiX) and store on config file
+81da55d3fa0adb1314b0c31dbe91677ae2e0da62 4a1b87c80d74ae646e2baab1d21f67031f1b028f Daniell Mesquita <daniellmesquita@protonmail.com> 1609029117 -0300	commit: Support to store username
+4a1b87c80d74ae646e2baab1d21f67031f1b028f 578f5201df1f2286d42a6d3ebe195dfb8b463480 Daniell Mesquita <daniellmesquita@protonmail.com> 1610141913 -0300	commit: energy.sh detects antix and disables suspend cmd
+578f5201df1f2286d42a6d3ebe195dfb8b463480 c4a312d8ef0c3b1f66b05345ef966831dabf19e8 Daniell Mesquita <daniellmesquita@protonmail.com> 1610141965 -0300	commit: old update flo-init
+c4a312d8ef0c3b1f66b05345ef966831dabf19e8 cd11b653d29496c65fcf5854bbefd0bb238d10f4 Daniell Mesquita <daniellmesquita@protonmail.com> 1610156138 -0300	commit: update build information

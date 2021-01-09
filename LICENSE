@@ -1,0 +1,40 @@
+The whole Floflis project and all its Software/products and assets, pertains to Floflis DAO and to Plasmmer DAO.
+Voting rights to Floflis is divised: 50% to Floflis DAO and 50% to Plasmmer DAO.
+
+# OPI License v2 - 1st draft
+
+This is free and unencumbered software released into the community/DAO (Decentralized Autonomous Organization) domain.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the community/DAO domain according to specified conditions. We make this dedication for the benefit of the community at large and to the detriment of our heirs and successors, denying family-meritocracy. We intend this dedication to be an overt act of relinquishment in perpetuity of all present and future rights to this Software under copyright law.
+
+Anyone is free to copy, modify, use, compile and/or share this software, either in source code form or as a compiled
+binary, for any non-commercial purpose (except Software that enables additional features through minimum donation of $1, and only the owner DAO - if it haves one - is elligible for that, or when the Software needs physical distribution), and by any means that includes this license and are not used for evil behaviour. Publishing and distributing is only allowed through a splicit authorization from the DAO which the Software/product pertains, in cases when the Software pertains to a DAO.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without much restrictions on free/libre, transparency and fairness focus/purpose, including without limitation the rights to use, copy, modify and merge, except sell copies of the Software (unless, as stated, is donation-ware or physically distributed), and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+1. This software (which also means its copies/forks) can not be made closed-source;
+2. This software and its forks should respect the Software/DAO's Manifesto, and not be used for evil behavior;
+3. This software can not include closed-source blobs/binaries/scripts/packages/dependencies, except when they are required to make CPU to work, and this should be advertised to users before downloading the Software, and also offer fully-free/open options for CPUs which doesn't requires binary blobs;
+4. This software can not be sold, althrough it is accepted to be sold if it is in physical distribution for covering physical media costs. Can be donation-ware only if it pertains to a DAO, and if it pertains to a DAO, its distribution/publishing rights exclusively pertains to its DAO;
+5. If this software is distributed as donation-ware, it need to accept a minimum $25 if one-time payment, minimum $1 if monthly and/or minimum $12 if annual - any of these values can be lower - for activating its premium features;
+6. Yet on the cases where the software is donation-ware, its pro/premium features need to also be open-source, even if they are downloaded from external sources;
+7. In addition to the previous (6th - sixth) and the 3rd (third) condition, any downloaded resource from the software need to be open-source, except when they are required to make non-CPU hardware to work, and also should be adviced to user before downloading. Community and/or friendlier communities should also have a effort in reversing/porting these proprietary binaries to open-source, working versions;
+8. In addition to the previous condition, any in-app updates (and the ones on app/software stores, when applicable) should describe what is being removed/added/modified, provide the source-code of the update, its hash/signatures/checksums and option to build it with one click - can also include reviews from WoT;
+9. Profits from Software can only be sent to the Ethereum/other-blockchain vault address of a DAO;
+10. If this Software doesn't pertains to a DAO, it can't have a paid/PRO version, but its physical copies can be sold to cover physical media costs;
+11. Physical distributions can include its PRO, donation-ware version, if the money is sent to the vault address of the DAO which the Software pertains;
+10. Any required-by-hardware closed-source dependency needs to be advertised to user;
+11. Any non-CPU required-by-hardware closed-source dependency, cannot be included with this Software, but manually downloaded through user option; dependency required to make CPU to work can be included with this Software, but also needs to be advertised to user, while also offering libre versions for unrestricted CPUs;
+12. Any copy/distribution of this Software, needs to include its full source-code, either as physical media or a link for it;
+13. Any download link for this Software and its dependencies, which includes softwares, drivers and source-code, need to be in a decentralized network, such as Swarm and IPFS;
+14. For any contributor that provides significant changes, it is required to register its agreement with this license;
+15. The above copyright notice and this permission notice (except the credits to contributors/development leaders) shall be included in all copies or substantial portions of the Software;
+16. Don't distribute/publish the Software without splicit authorization from the DAO which this Software pertains, if applicable (if it pertains to a DAO);
+17. The bellow disclaimer notice need to be included in all copies or substantial portions of the Software, in a disclaimer file accessible on software's installer and its menu:
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to <https://openplanetinitiative.github.io/opi-license/>
