@@ -39,9 +39,9 @@ cat << "EOF"
 
 EOF
 
-echo "Updating Floflis to FU$updatepatch+1..." #need to work/experimental
-
 if [ "$updatepatch" = "0" ]; then
+   echo "Updating Floflis to FU1..."
+   # here are the actions performed by this update patch; it makes use of an API, where Floflis Update binary decides what to execute and the user or custom-distro decides what to approve
    echo "Updating config file to register FU$updatepatch+1 update..." #need to work/experimental
    $maysudo sed -i 's/updatepatch="0"/updatepatch="1"/g' /usr/lib/floflis/config
    echo "(✓) Success! Your Floflis has been updated."
