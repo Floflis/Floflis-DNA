@@ -3,6 +3,7 @@
 # Layer: DNA
 
 # would load config from installed floflis
+# need to make it executable before using
 # . config
 
 # would detect fakeroot 
