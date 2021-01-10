@@ -1,6 +1,7 @@
 #!/bin/bash
-osname="Floflis 0 'Eusoumafoca'"
+osname="Floflis 20 build 2101 'Eusoumafoca'"
 osbuild="2101"
+updatepatch="0"
 year="2021"
 layer="dna"
 nxtlayer="core"
@@ -36,3 +37,4 @@ case "${unameOutM}" in
     arm)    dpkg --print-flofarch | grep -q "arm64" && flofarch="arm64" || flofarch="arm";;
     riscv64) flofarch="riscv64"
 esac
+echo ${flofarch}
