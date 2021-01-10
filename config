@@ -1,7 +1,10 @@
 #!/bin/bash
 osname="Floflis 20 build 2101 'Eusoumafoca'"
+# support custom OS name
 osbuild="2101"
+# support custom OS build
 updatepatch="0"
+# support custom OS updatepatch
 year="2021"
 layer="dna"
 nxtlayer="core"
