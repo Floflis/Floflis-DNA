@@ -3,7 +3,9 @@ if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
    echo "Power/energy:"
    echo "   shutdown, shu, off          Shutdown/power-off Floflis"
    echo "   restart, res, reboot        Restarts Floflis"
-#   echo "   suspend, sus, standby       Suspends Floflis"
+   if [ ! -e /usr/local/bin/*antiX* ]; then
+      echo "   suspend, sus, standby       Suspends Floflis"
+fi
 fi
 
 if [ "$1" = "poweroff" ] || [ "$1" = "off" ] || [ "$1" = "shutdown" ] || [ "$1" = "shu" ]; then
