@@ -28,35 +28,33 @@ cat > /usr/share/applications/uniswap.desktop <<EOF
 Encoding=UTF-8
 Name=Uniswap
 Comment=Swap/exchange ETH and tokens
-Type=Link
-URL=ipfs://uniswap.eth
+Type=Application
+Exec=uniswap
 Icon=uniswap
 Categories=Finance;Ethereum;
 Keywords=swap;exchange;tokens;ethereum;
 EOF
+cat > /usr/bin/uniswap <<EOF
+#!/bin/bash
+
+xdg-open ipfs://uniswap.eth
+EOF
+sudo chmod +x /usr/bin/uniswap
 
 cat > /usr/share/applications/decentraland.desktop <<EOF
 [Desktop Entry]
 Encoding=UTF-8
 Name=Decentraland
 Comment=Play in a open 3D metaverse with other etherean players, and spend tokens to buy NFT items/wearables
-Type=Link
-URL=https://play.decentraland.org/
+Type=Application
+Exec=decentraland
 Icon=decentraland
 Categories=Game;Simulation;Metaverse;Ethereum;Polygon;
 Keywords=metaverse;world;mining;tokens;ethereum;wearables;multiplayer;roleplaying;
 EOF
+cat > /usr/bin/decentraland <<EOF
+#!/bin/bash
 
-cat > /usr/bin/uniswap <<EOF
-[Desktop Entry]
-Encoding=UTF-8
-Name=Decentraland
-Comment=Play in a open 3D metaverse with other etherean players, and spend tokens to buy NFT items/wearables
-Type=Link
-URL=https://play.decentraland.org/
-Icon=decentraland
-Categories=Game;Simulation;Metaverse;Ethereum;Polygon;
-Keywords=metaverse;world;mining;tokens;ethereum;wearables;multiplayer;roleplaying;
+xdg-open https://play.decentraland.org/
 EOF
-
-sudo chmod +x /usr/bin/uniswap
+sudo chmod +x /usr/bin/decentraland
