@@ -74,6 +74,19 @@ if [ -e LICENSE ]
          esac
 fi
 
+
+echo "${dna_ascii}"
+echo "(DEVELOPER/OEM-ONLY) Are you installing into an Cubic chroot? 💫 [Y/n]"
+   read cubicmode
+   case $cubicmode in
+      [nN])
+         echo "Ok, its an normal install."
+      [yY])
+         echo "Ok, you're an Floflis developer installing using Cubic! Wonderful 🧚"
+         $maysudo mkdir /tmp/cubicmode
+esac
+
+
 echo "- Creating Floflis' Layers folder..."
 mkdir -p /usr/lib/floflis/layers
 echo "- Creating folder for Floflis' DNA in /usr/lib/floflis/layers..."
@@ -259,4 +272,7 @@ fi
 
 $maysudo rm /usr/lib/floflis/layers/dna/install.sh # no need anymore to use the installer again
 $maysudo rm -r /usr/lib/floflis/layers/dna/layers # as layer are already transfered out of this temporary, built-in folder, it need to be cleared
+if [ -e /tmp/cubicmode ]; then
+   $maysudo rm -rf /tmp/cubicmode
+fi
 echo "(✓) Successfully installed. Just type '${flo}' (without quotes) and hit 'enter' button to open it."
