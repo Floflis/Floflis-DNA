@@ -1,7 +1,7 @@
 #!/bin/bash
-osname="Floflis 20 build 2105 'Eusoumafoca'"
+osname="Floflis 20 build 2106 'Eusoumafoca'"
 # support custom OS name
-osbuild="2105"
+osbuild="2106"
 # support custom OS build
 updatepatch="0"
 # support custom OS updatepatch
