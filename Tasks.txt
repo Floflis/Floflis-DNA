@@ -1,0 +1,15 @@
+- cant install lightdm and others if Ubuntu
+
+Last step of Floflis install is to run custom.sh, that constains UniOS install
+
+Issue: even not completing install, it considers the latest layer (to fix that, Floflis DNA should only load layers' installers if previous are installed. previous are only registered as installed after steps are identified as completed)
+
+modules as folders with git and their oppose versions (uses git branches)
+
+DNA install.sh only install next layers if previous are installed
+DNA install.sh ask to keep git folder when installing
+
+fix: it recognizes is Linux, but shows unknw
+fix: isnt reading distro name, showing unknw
+
+itself and installer: use SH
