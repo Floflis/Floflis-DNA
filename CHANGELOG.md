@@ -27,8 +27,8 @@ Lite: https://gateway.pinata.cloud/ipfs/QmXSiq2atUQeisoiV3PDisNP4LecBCNLv6p6nymv
 DaniellMesquita@github.com
 
 ## Install from IPFS:
-Normal: 
-Lite: 
+Normal: https://gateway.pinata.cloud/ipfs/QmSxyVaW3MruQ2zQh8UjGE9XugbX1pz8iCYoAV8bViKLoq
+Lite: https://gateway.pinata.cloud/ipfs/QmNdMATHet3TnUngY8QfM5vmepQYpWQcPWYGdVbmPDRPP5
 
 ## Changes
 

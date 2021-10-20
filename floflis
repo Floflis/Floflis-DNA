@@ -3,7 +3,7 @@
 # < --------------------- take extra attention, ensure compatibility on init and install ------------
 
 # load definitions & settings
-source /usr/lib/floflis/layers/dna/config.sh
+source /usr/lib/floflis/config
 
 # supports 'flo' short command
    if [ -e /usr/bin/flo ]
@@ -17,12 +17,12 @@ fi
 
 versionshow="        \e[101m $osname \e[0m\e[100m build $osbuild \e[0m"
 
-# shows presentation if user just types 'floflis':
 # shows presentation if user just types 'floflis/flo':
 if [ "$1" = "" ]; then
-   cat /usr/lib/floflis/layers/$layer/presentation.sh
-   echo -e "$versionshow"
+   cat /usr/lib/floflis/layers/$layer/presentation
+   echo -e "$versionshow - $year"
    echo "Type '$flo --help' (without quotes) to see a list of available commands."
+# detect 071 version and fix>
    if [ -e /usr/sbin/floflis ]
       then
          echo "- Floflis build 071 detected. It uses a old folder structure. Fixing..."
@@ -30,11 +30,14 @@ if [ "$1" = "" ]; then
          sudo mv -f /usr/sbin/floflis /usr/bin
          echo "Fixed."
 fi
-   if [ ! -e /usr/lib/floflis/layers/core ]
-      then
-         echo -e "\e[101m NOTE: FLOFLIS DNA IS NOW UPGRADEABLE TO FLOFLIS CORE! \e[0m"
+# <detect 071 version and fix
 fi
-fi
+# re-enable after upgrade feature is implemented. also, should detect if Core is already installed before asking
+#   if [ ! -e /usr/lib/floflis/layers/core ]
+#      then
+#         echo -e "\e[101m NOTE: FLOFLIS DNA IS NOW UPGRADEABLE TO FLOFLIS CORE! \e[0m"
+#fi
+#fi
 
 # displays help message with a list of commands:
 if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
@@ -67,97 +70,163 @@ if [ -e /usr/lib/floflis/layers/dna/modules/energy.sh ]
 then
     . /usr/lib/floflis/layers/dna/modules/energy.sh
 fi
-# update / build 081 will move to Core
-if [ -e /usr/lib/floflis/layers/dna/modules/update.sh ]
-then
-    . /usr/lib/floflis/layers/dna/modules/update.sh
-fi
 # load information and modules from layers
 # -
 # Core
 if [ -e /usr/lib/floflis/layers/core ]
 then
-    layernm="Floflis Core"
-    . /usr/lib/floflis/layers/core/floflis.sh
-else
-    layernm="Floflis DNA"
+#    sudo sed -i 's/dna/core/g' /usr/lib/floflis/config
+#    layernm="Floflis Core"
+    . /usr/lib/floflis/layers/core/floflis
+#else
+#    layernm="Floflis DNA"
+fi
+# -
+# Server
+if [ -e /usr/lib/floflis/layers/server ]
+then
+#    sudo sed -i 's/dna/core/g' /usr/lib/floflis/config
+#    layernm="Floflis Core"
+    . /usr/lib/floflis/layers/server/floflis
+#else
+#    layernm="Floflis DNA"
+fi
+# -
+# Soil
+if [ -e /usr/lib/floflis/layers/soil ]
+then
+#    sudo sed -i 's/dna/core/g' /usr/lib/floflis/config
+#    layernm="Floflis Core"
+    . /usr/lib/floflis/layers/soil/floflis
+#else
+#    layernm="Floflis DNA"
+fi
+# -
+# Grass
+if [ -e /usr/lib/floflis/layers/grass ]
+then
+#    sudo sed -i 's/dna/core/g' /usr/lib/floflis/config
+#    layernm="Floflis Core"
+    . /usr/lib/floflis/layers/grass/floflis
+#else
+#    layernm="Floflis DNA"
+fi
+# -
+# Base
+if [ -e /usr/lib/floflis/layers/base ]
+then
+#    sudo sed -i 's/dna/core/g' /usr/lib/floflis/config
+#    layernm="Floflis Core"
+    . /usr/lib/floflis/layers/base/floflis
+#else
+#    layernm="Floflis DNA"
+fi
+# -
+# Home
+if [ -e /usr/lib/floflis/layers/home ]
+then
+#    sudo sed -i 's/dna/core/g' /usr/lib/floflis/config
+#    layernm="Floflis Core"
+    . /usr/lib/floflis/layers/home/floflis
+#else
+#    layernm="Floflis DNA"
+fi
+# -
+# Ultimate
+if [ -e /usr/lib/floflis/layers/ultimate ]
+then
+#    sudo sed -i 's/dna/core/g' /usr/lib/floflis/config
+#    layernm="Floflis Core"
+    . /usr/lib/floflis/layers/ultimate/floflis
+#else
+#    layernm="Floflis DNA"
+fi
+# -
+# Planetary
+if [ -e /usr/lib/floflis/layers/planetary ]
+then
+#    sudo sed -i 's/dna/core/g' /usr/lib/floflis/config
+#    layernm="Floflis Core"
+    . /usr/lib/floflis/layers/planetary/floflis
+#else
+#    layernm="Floflis DNA"
 fi
 
 if [ "$1" = "--version" ] || [ "$1" = "-v" ]; then
-   echo -e "$versionshow ($layernm layer)"
+   echo -e "$versionshow ($layer layer) - $year"
 fi
 
-if [ "$nxtlayer" = "core" ]; then
-   nxtlayernm="Floflis Core"
-fi
+#if [ "$nxtlayer" = "core" ]; then
+#   nxtlayernm="Floflis Core"
+#fi
 
-if [ "$1" = "upgrade" ] || [ "$1" = "upgrd" ] || [ "$1" = "pgrd" ] || [ "$1" = "upgr" ] || [ "$1" = "upg" ]; then
-   if [ "$layer" = "core" ]
-   then
-      echo "You're already on the highest layer available for now ($layernm)."  
-      echo ""
-      echo "Subscribe to our blog to know about new layers: https://floflis.github.io/blog"
-   else
-      cat << "EOF"
-
--. .-.   .-. .-.   .-. .-.   .
-  \   \ /   \   \ /   \   \ /
- / \   \   / \   \   / \   \
-~   `-~ `-`   `-~ `-`   `-~ `-
-
-EOF
-      echo "You're requesting to upgrade from $layernm to $nxtlayernm. You could do it by manually downloading/clonning $nxtlayernm and running its install.sh, or directly from a git service."
-      echo ""
-      echo "What do you want to do?"
-      echo "1 = I want do download its release package (IPFS available alongside GitHub)"
-      echo "2 = I want to clone it from a git service"
-      echo "3 = I want to directly upgrade it from a git service"
-      echo "Please reply by typping a number (according to your choice) and press [ENTER]:"
-      read choosetoupgrade
-      if [ "$choosetoupgrade" = "1" ]; then
-         cat << "EOF"
-
--. .-.   .-. .-.   .-. .-.   .
-  \   \ /   \   \ /   \   \ /
- / \   \   / \   \   / \   \
-~   `-~ `-`   `-~ `-`   `-~ `-
-
-EOF
-         echo "You can choose a package to install, here:"
-         echo "https://floflis.github.io/download/"
-         echo "After downloading $nxtlayernm, run its 'init.sh' (if the downloaded version isn't Lite), move the folder to the target device, then run its 'install.sh'."
-fi
-      if [ "$choosetoupgrade" = "2" ]; then
-         cat << "EOF"
-
--. .-.   .-. .-.   .-. .-.   .
-  \   \ /   \   \ /   \   \ /
- / \   \   / \   \   / \   \
-~   `-~ `-`   `-~ `-`   `-~ `-
-
-EOF
-         echo "You can choose a git service to clone, here:"
-         echo "https://floflis.github.io/download#clone"
-         echo "After clonning $nxtlayernm, run its 'init.sh', move the folder to the target device, then run its 'install.sh'."
-fi
-      if [ "$choosetoupgrade" = "3" ]; then
-         cat << "EOF"
-
--. .-.   .-. .-.   .-. .-.   .
-  \   \ /   \   \ /   \   \ /
- / \   \   / \   \   / \   \
-~   `-~ `-`   `-~ `-`   `-~ `-
-
-EOF
-         echo "Please note P2P isn't yet available."
-         echo "- Upgrading to Core layer from GitLab..."
-         cd /usr/lib/floflis/layers
-         sudo git clone https://gitlab.com/Floflis/Floflis-Core.git core
-         sudo sed -i 's/dna/core/g' /usr/lib/floflis/layers/dna/config.sh
-         echo "(✓) Floflis DNA has been upgraded to Floflis Core." && exit
-fi
-fi
-fi
+#if [ "$1" = "upgrade" ] || [ "$1" = "upgrd" ] || [ "$1" = "pgrd" ] || [ "$1" = "upgr" ] || [ "$1" = "upg" ]; then
+#   if [ "$layer" = "core" ]
+#   then
+#      echo "You're already on the highest layer available for now ($layernm)."  
+#      echo ""
+#      echo "Subscribe to our blog to know about new layers: https://floflis.github.io/blog"
+#   else
+#      cat << "EOF"
+#
+#-. .-.   .-. .-.   .-. .-.   .
+#  \   \ /   \   \ /   \   \ /
+# / \   \   / \   \   / \   \
+#~   `-~ `-`   `-~ `-`   `-~ `-
+#
+#EOF
+#      echo "You're requesting to upgrade from $layernm to $nxtlayernm. You could do it by manually downloading/clonning $nxtlayernm and running its install.sh, or directly from a git service."
+#      echo ""
+#      echo "What do you want to do?"
+#      echo "1 = I want do download its release package (IPFS available alongside GitHub)"
+#      echo "2 = I want to clone it from a git service"
+#      echo "3 = I want to directly upgrade it from a git service"
+#      echo "Please reply by typping a number (according to your choice) and press [ENTER]:"
+#      read choosetoupgrade
+#      if [ "$choosetoupgrade" = "1" ]; then
+#         cat << "EOF"
+#
+#-. .-.   .-. .-.   .-. .-.   .
+#  \   \ /   \   \ /   \   \ /
+# / \   \   / \   \   / \   \
+#~   `-~ `-`   `-~ `-`   `-~ `-
+#
+#EOF
+#         echo "You can choose a package to install, here:"
+#         echo "https://floflis.github.io/download/"
+#         echo "After downloading $nxtlayernm, run its 'init.sh' (if the downloaded version isn't Lite), move the folder to the target device, then run its 'install.sh'."
+#fi
+#      if [ "$choosetoupgrade" = "2" ]; then
+#         cat << "EOF"
+#
+#-. .-.   .-. .-.   .-. .-.   .
+#  \   \ /   \   \ /   \   \ /
+# / \   \   / \   \   / \   \
+#~   `-~ `-`   `-~ `-`   `-~ `-
+#
+#EOF
+#         echo "You can choose a git service to clone, here:"
+#         echo "https://floflis.github.io/download#clone"
+#         echo "After clonning $nxtlayernm, run its 'init.sh', move the folder to the target device, then run its 'install.sh'."
+#fi
+#      if [ "$choosetoupgrade" = "3" ]; then
+#         cat << "EOF"
+#
+#-. .-.   .-. .-.   .-. .-.   .
+#  \   \ /   \   \ /   \   \ /
+# / \   \   / \   \   / \   \
+#~   `-~ `-`   `-~ `-`   `-~ `-
+#
+#EOF
+#         echo "Please note P2P isn't yet available."
+#         echo "- Upgrading to Core layer from GitLab..."
+#         cd /usr/lib/floflis/layers
+#         sudo git clone https://gitlab.com/Floflis/Floflis-Core.git core
+#         sudo sed -i 's/dna/core/g' /usr/lib/floflis/layers/dna/config.sh
+#         echo "(✓) Floflis DNA has been upgraded to Floflis Core." && exit
+#fi
+#fi
+#fi
 
 # todo:support updates if Dat is installed
 

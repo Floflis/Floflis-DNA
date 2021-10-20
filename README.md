@@ -46,21 +46,6 @@ If you need the source, please don't directly download the source; clone it. (yo
 
 For more details, visit our [downloads page](https://floflis.github.io/download/).
 
-## Before installing
-
-**Note**: You can skip this step if your device haves enough storage space available. If the target device is limited (like a WiFi router), this pre-install step will be needed, except when you'd already downloaded the Lite version.
-
-If you wish to remove the updates module (which includes .git folder), please copy the `Floflis DNA` folder, so you will have a copy which you can update (`git pull`).
-
-Inside the clonned/downloaded extracted folder, open Terminal and type the following:
-
-```sh
-sudo chmod +x init.sh && sudo sh ./init.sh
-```
-
-Respond to questions and the script will configure the installer for you.
-After done, you can move the `Floflis DNA` folder to your device.
-
 ## Installing
 
 Assuming `Floflis DNA` folder is on the target device, run the following command inside this folder:
@@ -92,12 +77,17 @@ Update from GitHub:
 floflis update --github
 ```
 
+* config file doesn't anymore depends on a specific layer (previously depending upon DNA Layer)
+* in config, show build/version's year
+* no need to upgrade again when installing/updating DNA Layer?
+* only remove install.sh after sure it's installed
+* Detect OS, Distro and CPU Arch
+
 ## To do
 
 * don't say on script it is success without reading output from script (for example, "fatal: unable to access 'https://gitlab.com/Floflis/Floflis-DNA.git/': Could not resolve host: gitlab.com")
 * if "sudo: git: command not found" install git
 * install.sh: detect attached layers and install them
-* Upgrade to Core
 * (fix) install.sh: only show license/disclaimer if reader module is available (license/disclaimer is considered as already agreed when user explicitly agrees and removes information-reader module)
 * Floflis DNA installer runs Core's own installer
 * update Floflis DNA from local network device
@@ -117,4 +107,4 @@ floflis update --github
 * upgrade module instead of relying on `floflis` (install.sh will also use it)
 * modular changelog
 * detect a installation that were canceled without user asking
-* tell when install.sh isn`t exec as root
+* tell when install.sh isn't exec as root
