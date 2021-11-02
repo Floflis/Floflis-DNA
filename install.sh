@@ -185,7 +185,7 @@ fi
          echo "- Preparing to install Grass layer..."
          $maysudo rm -r -f /usr/lib/floflis/layers/grass
          $maysudo mv -f /usr/lib/floflis/layers/dna/layers/grass /usr/lib/floflis/layers
-         echo "- Openning Floflis Soil installer..."
+         echo "- Openning Floflis Grass installer..."
          $maysudo chmod +x /usr/lib/floflis/layers/grass/install.sh && cd /usr/lib/floflis/layers/grass && sh ./install.sh
 fi
 fi
