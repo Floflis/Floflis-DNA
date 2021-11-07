@@ -4,6 +4,7 @@
 
 # load definitions & settings
 source /usr/lib/floflis/config
+export flofarch && export osfullname && export osname && export osversion && export osbuild && export updatepatch && export year && export layer && export nxtlayer && export distrobase
 
 # supports 'flo' short command
    if [ -e /usr/bin/flo ]
