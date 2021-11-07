@@ -1,7 +1,11 @@
 #!/bin/bash
-osname="Floflis 20 build 2106 'Eusoumafoca'"
+osfullname="Floflis 19 build 2106 'Eusoumafoca'"
+# support custom OS fullname
+osname="Floflis"
 # support custom OS name
-osbuild="2106"
+osversion="19"
+# support custom OS version
+osbuild="2111_X"
 # support custom OS build
 updatepatch="0"
 # support custom OS updatepatch
@@ -40,4 +44,3 @@ case "${unameOutM}" in
     arm)    dpkg --print-flofarch | grep -q "arm64" && flofarch="arm64" || flofarch="arm";;
     riscv64) flofarch="riscv64"
 esac
-echo ${flofarch}
