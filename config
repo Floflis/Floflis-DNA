@@ -16,24 +16,23 @@ distrobase="blank"
 user="blank"
 # install="new" # new, ok
 
-unameOutS="$(uname -s)"
-case "${unameOut}" in
+case "${nameOutS}"$(uname -s) in
     Linux*)     flofmach="Linux";;
     Darwin*)    flofmach="Mac";;
-    CYGWIN*)    flofmach="Cygwin";;
-# if 64-bit, Cygwin isn't detected
+    CYGWIN*)    flofmach="Cygwin";; # if 64-bit, Cygwin isn't detected
     MINGW*)     flofmach="MinGw";;
     FreeBSD*)   flofmach="FreeBSD";;
-    GNU*)       flofmach="GNU"
-#    *)          flofmach="UNKNOWN:${unameOutS}"
+    GNU*)       flofmach="GNU";;
+    *)          flofmach="UNKNOWN:${nameOutD}"
 esac
-##echo ${flofmach}
+#echo ${flofmach}
 
-case "${nameOutD}"$(awk -F= '/^NAME/{print $2}' /etc/os-release) in
-    Debian*)     flofdistro=Debian
-#    *)          flofdistro="UNKNOWN:${nameOutD}"
+case "${nameOutD}"$(awk -F= '/^NAME/{print $2}' /etc/os-release | tr -d '"') in
+    Debian*)     flofdistro=Debian;;
+    Ubuntu*)     flofdistro=Ubuntu;;
+    *)          flofdistro="UNKNOWN:${nameOutD}"
 esac
-##echo ${flofdistro}
+#echo ${flofdistro}
 
 unameOutM="$(uname -m)"
 case "${unameOutM}" in
