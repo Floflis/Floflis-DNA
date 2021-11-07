@@ -138,7 +138,6 @@ $maysudo chmod 755 /etc/init.d/flo-init && $maysudo update-rc.d flo-init default
 if [ -e /usr/lib/floflis/layers/dna/layers ]
 then
    echo "- Layers are here. Detecting..."
-   . ./config
 # Core>
    if [ -e /usr/lib/floflis/layers/dna/floflis ]
    then
