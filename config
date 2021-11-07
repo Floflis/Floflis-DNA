@@ -27,13 +27,13 @@ case "${unameOut}" in
     GNU*)       flofmach="GNU"
 #    *)          flofmach="UNKNOWN:${unameOutS}"
 esac
-echo ${flofmach}
+##echo ${flofmach}
 
 case "${nameOutD}"$(awk -F= '/^NAME/{print $2}' /etc/os-release) in
     Debian*)     flofdistro=Debian
 #    *)          flofdistro="UNKNOWN:${nameOutD}"
 esac
-echo ${flofdistro}
+##echo ${flofdistro}
 
 unameOutM="$(uname -m)"
 case "${unameOutM}" in
@@ -44,3 +44,4 @@ case "${unameOutM}" in
     arm)    dpkg --print-flofarch | grep -q "arm64" && flofarch="arm64" || flofarch="arm";;
     riscv64) flofarch="riscv64"
 esac
+#echo ${flofarch}
