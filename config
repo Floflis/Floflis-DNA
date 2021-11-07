@@ -44,3 +44,5 @@ case "${unameOutM}" in
     riscv64) flofarch="riscv64"
 esac
 #echo ${flofarch}
+
+export flofarch && export osfullname && export osname && export osversion && export osbuild && export updatepatch && export year && export layer && export nxtlayer && export distrobase

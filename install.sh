@@ -139,7 +139,6 @@ if [ -e /usr/lib/floflis/layers/dna/layers ]
 then
    echo "- Layers are here. Detecting..."
    . ./config
-   export flofarch && export osfullname && export osname && export osversion && export osbuild && export updatepatch && export year && export layer && export nxtlayer && export distrobase
 # Core>
    if [ -e /usr/lib/floflis/layers/dna/floflis ]
    then
