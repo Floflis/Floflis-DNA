@@ -37,6 +37,7 @@ esac
 unameOutM="$(uname -m)"
 case "${unameOutM}" in
     i286)   flofarch="286";;
+    i586)   flofarch="586";;
     i386)   flofarch="386";;
     i686)   flofarch="386";;
     x86_64) flofarch="amd64";;
@@ -44,5 +45,3 @@ case "${unameOutM}" in
     riscv64) flofarch="riscv64"
 esac
 #echo ${flofarch}
-
-export flofarch && export osfullname && export osname && export osversion && export osbuild && export updatepatch && export year && export layer && export nxtlayer && export distrobase
