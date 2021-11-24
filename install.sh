@@ -269,6 +269,8 @@ fi
 $maysudo rm /usr/lib/floflis/layers/dna/install.sh # no need anymore to use the installer again
 $maysudo rm -r /usr/lib/floflis/layers/dna/layers # as layer are already transfered out of this temporary, built-in folder, it need to be cleared
 if [ -e /tmp/cubicmode ]; then
+   apt clean all
+   apt cache clear
    $maysudo rm -rf /tmp/cubicmode
 fi
 echo "(✓) Successfully installed. Just type '${flo}' (without quotes) and hit 'enter' button to open it."
