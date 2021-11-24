@@ -33,12 +33,7 @@ if [ "$is_root" = "false" ]
       maysudo=""
 fi
 
-dna_ascii=""" 
--. .-.   .-. .-.   .-. .-.   .
-  \   \ /   \   \ /   \   \ /
- / \   \   / \   \   / \   \
-~   `-~ `-`   `-~ `-`   `-~ `-
-"""
+dna_ascii=$(cat /usr/lib/floflis/layers/dna/dna_ascii)
 #
 echo "${dna_ascii}"
 #
