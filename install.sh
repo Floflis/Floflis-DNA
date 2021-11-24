@@ -28,9 +28,9 @@ $maysudo=""
 
 if [ "$is_root" = "false" ]
    then
-      $maysudo="sudo"
+      maysudo="sudo"
    else
-      $maysudo=""
+      maysudo=""
 fi
 
 dna_ascii=""" 
