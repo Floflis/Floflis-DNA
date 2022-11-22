@@ -3,6 +3,8 @@
 - "config": detect Ubuntu Cinnamon Remix
 - DNA and Core: module list then modules.sh uses it
 
+- test fl on ARM chroot then fix the $maysudo mess from this to upper layers
+
 - store distrobase
 
 - don't install lightdm and others if Ubuntu
