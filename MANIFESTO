@@ -1,7 +1,3 @@
 The Floflis Manifesto
 
-- Don't use 3rd-party software for playing media. Instead, use VLC Media Player and ask to convert media;
-- Don't use proprietary blobs/binaries when they're not required to make CPU to work, and offer fully free versions for CPUs which doesn't require that;
-- Never use systemd
-- Don't add sponsored content
-- Always be open to new things (eg. its a new blockchain which will make Duniter stronger? use it. its a security audit program which is written in a brand new language which is safer and faster than Rust? use it), if they're not like systemd
+
