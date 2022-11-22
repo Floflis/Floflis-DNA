@@ -1,6 +1,11 @@
-- cant install lightdm and others if Ubuntu
+- move 'dna_ascii' to a resources folder
+- symlink DISCLAIMER and other similar files to upper layers (check CID before)
 
-Last step of Floflis install is to run custom.sh, that constains UniOS install
+- store distrobase
+
+- don't install lightdm and others if Ubuntu
+
+Last step of Floflis install is to run install-custom.sh, that constains UniOS install
 
 Issue: even not completing install, it considers the latest layer (to fix that, Floflis DNA should only load layers' installers if previous are installed. previous are only registered as installed after steps are identified as completed)
 
