@@ -1,5 +1,7 @@
 - move 'dna_ascii' to a resources folder
 - symlink DISCLAIMER and other similar files to upper layers (check CID before)
+- "config": detect Ubuntu Cinnamon Remix
+- DNA and Core: module list then modules.sh uses it
 
 - store distrobase
 
