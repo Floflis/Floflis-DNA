@@ -85,6 +85,7 @@ floflis update --github
 
 ## To do
 
+* tell when install.sh isn't exec as root
 * don't say on script it is success without reading output from script (for example, "fatal: unable to access 'https://gitlab.com/Floflis/Floflis-DNA.git/': Could not resolve host: gitlab.com")
 * if "sudo: git: command not found" install git
 * install.sh: detect attached layers and install them
@@ -100,11 +101,8 @@ floflis update --github
 * themes
 * receive updates from native dat (when it is available)
 * GitLab releases
-* Dat releases
-* ZN releases
-* suggest to download upgrade from Dat/IPFS
-* remove/uninstall modules and features, such as `flo`
+* suggest to download upgrade from IPFS
+* option to remove/uninstall modules and features, such as `flo`
 * upgrade module instead of relying on `floflis` (install.sh will also use it)
 * modular changelog
 * detect a installation that were canceled without user asking
-* tell when install.sh isn't exec as root
