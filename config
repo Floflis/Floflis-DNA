@@ -1,5 +1,5 @@
 #!/bin/bash
-osbuild="2211_1"
+osbuild="2212_1"
 # support custom OS build
 osfullname="Floflis 19 build $osbuild 'Eusoumafoca'"
 # support custom OS fullname
