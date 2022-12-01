@@ -3,7 +3,7 @@
 # < --------------------- take extra attention, ensure compatibility on init and install ------------
 
 # load definitions & settings
-source /usr/lib/floflis/config
+. /usr/lib/floflis/./config
 export flofarch && export osfullname && export osname && export osversion && export osbuild && export updatepatch && export year && export layer && export nxtlayer && export distrobase
 
 # supports 'flo' short command
@@ -61,9 +61,9 @@ fi
 
 # load modules
 # -
-if [ -f /usr/lib/floflis/layers/dna/modules ]
+if [ -e /usr/lib/floflis/layers/dna/modules ]
 then
-    . /usr/lib/floflis/layers/dna/modules.sh
+    . /usr/lib/floflis/layers/dna/./modules.sh
 fi
 
 # load information and modules from layers
@@ -73,7 +73,7 @@ if [ -e /usr/lib/floflis/layers/core ]
 then
 #    sudo sed -i 's/dna/core/g' /usr/lib/floflis/config
 #    layernm="Floflis Core"
-    . /usr/lib/floflis/layers/core/floflis
+    . /usr/lib/floflis/layers/core/./floflis
 #else
 #    layernm="Floflis DNA"
 fi
@@ -83,7 +83,7 @@ if [ -e /usr/lib/floflis/layers/server ]
 then
 #    sudo sed -i 's/dna/core/g' /usr/lib/floflis/config
 #    layernm="Floflis Core"
-    . /usr/lib/floflis/layers/server/floflis
+    . /usr/lib/floflis/layers/server/./floflis
 #else
 #    layernm="Floflis DNA"
 fi
@@ -93,7 +93,7 @@ if [ -e /usr/lib/floflis/layers/soil ]
 then
 #    sudo sed -i 's/dna/core/g' /usr/lib/floflis/config
 #    layernm="Floflis Core"
-    . /usr/lib/floflis/layers/soil/floflis
+    . /usr/lib/floflis/layers/soil/./floflis
 #else
 #    layernm="Floflis DNA"
 fi
@@ -103,7 +103,7 @@ if [ -e /usr/lib/floflis/layers/grass ]
 then
 #    sudo sed -i 's/dna/core/g' /usr/lib/floflis/config
 #    layernm="Floflis Core"
-    . /usr/lib/floflis/layers/grass/floflis
+    . /usr/lib/floflis/layers/grass/./floflis
 #else
 #    layernm="Floflis DNA"
 fi
@@ -113,7 +113,7 @@ if [ -e /usr/lib/floflis/layers/base ]
 then
 #    sudo sed -i 's/dna/core/g' /usr/lib/floflis/config
 #    layernm="Floflis Core"
-    . /usr/lib/floflis/layers/base/floflis
+    . /usr/lib/floflis/layers/base/./floflis
 #else
 #    layernm="Floflis DNA"
 fi
@@ -123,7 +123,7 @@ if [ -e /usr/lib/floflis/layers/home ]
 then
 #    sudo sed -i 's/dna/core/g' /usr/lib/floflis/config
 #    layernm="Floflis Core"
-    . /usr/lib/floflis/layers/home/floflis
+    . /usr/lib/floflis/layers/home/./floflis
 #else
 #    layernm="Floflis DNA"
 fi
@@ -133,7 +133,7 @@ if [ -e /usr/lib/floflis/layers/ultimate ]
 then
 #    sudo sed -i 's/dna/core/g' /usr/lib/floflis/config
 #    layernm="Floflis Core"
-    . /usr/lib/floflis/layers/ultimate/floflis
+    . /usr/lib/floflis/layers/ultimate/./floflis
 #else
 #    layernm="Floflis DNA"
 fi
@@ -143,7 +143,7 @@ if [ -e /usr/lib/floflis/layers/planetary ]
 then
 #    sudo sed -i 's/dna/core/g' /usr/lib/floflis/config
 #    layernm="Floflis Core"
-    . /usr/lib/floflis/layers/planetary/floflis
+    . /usr/lib/floflis/layers/planetary/./floflis
 #else
 #    layernm="Floflis DNA"
 fi
