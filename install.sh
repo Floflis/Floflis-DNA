@@ -83,10 +83,8 @@ echo "(DEVELOPER/OEM-ONLY) Are you installing into an Cubic chroot? 💫 [Y/n]"
 esac
 
 
-echo "- Creating Floflis' Layers folder..."
-mkdir -p /usr/lib/floflis/layers
-echo "- Creating folder for Floflis' DNA in /usr/lib/floflis/layers..."
-mkdir -p /usr/lib/floflis/layers/dna
+if [ ! -e /usr/lib/floflis/layers ]; then echo "- Creating Floflis' Layers folder...";mkdir -p /usr/lib/floflis/layers; fi
+if [ ! -e /usr/lib/floflis/layers/dna ]; then echo "- Creating folder for Floflis' DNA in /usr/lib/floflis/layers...";mkdir -p /usr/lib/floflis/layers/dna; fi
 echo "- Installing Floflis' DNA..."
 if [ -e layers/soil ]
 then
