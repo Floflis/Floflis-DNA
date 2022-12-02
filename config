@@ -1,14 +1,16 @@
 #!/bin/bash
 osbuild="2212_1"
-# support custom OS build
-osfullname="Floflis 19 build $osbuild 'Eusoumafoca'"
-# support custom OS fullname
+# support custom OS Build
+osbuildcodename="'Eusoumafoca'"
+# support custom OS Build Codename
 osname="Floflis"
-# support custom OS name
+# support custom OS Name
 osversion="19"
-# support custom OS version
+# support custom OS Version
+osfullname="$osname $osversion build $osbuild $osbuildcodename"
+# support custom OS FullName
 updatepatch="0"
-# support custom OS updatepatch
+# support custom OS Updatepatch
 year="2022"
 layer="dna"
 nxtlayer="core"

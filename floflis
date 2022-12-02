@@ -4,7 +4,7 @@
 
 # load definitions & settings
 . /usr/lib/floflis/./config
-export flofarch && export osfullname && export osname && export osversion && export osbuild && export updatepatch && export year && export layer && export nxtlayer && export distrobase
+export flofarch && export osfullname && export osname && export osversion && export osbuild && export osbuildcodename && export updatepatch && export year && export layer && export nxtlayer && export distrobase
 
 # supports 'flo' short command
    if [ -e /usr/bin/flo ]
@@ -149,7 +149,7 @@ then
 fi
 
 if [ "$1" = "--version" ] || [ "$1" = "-v" ]; then
-   echo -e "$versionshow ($layer layer) - $year"
+   echo -e "$versionshow | $osbuildcodename ($layer layer) - $year"
 fi
 
 #if [ "$nxtlayer" = "core" ]; then
