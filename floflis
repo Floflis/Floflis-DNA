@@ -21,7 +21,7 @@ versionshow="        \e[101m $osname \e[0m\e[100m build $osbuild \e[0m"
 # shows presentation if user just types 'floflis/flo':
 if [ "$1" = "" ]; then
    cat /usr/lib/floflis/layers/$layer/presentation
-   echo -e "$versionshow - $year"
+   echo -e "$versionshow | $osbuildcodename - $year"
    echo "Type '$flo --help' (without quotes) to see a list of available commands."
 # detect 071 version and fix>
    if [ -e /usr/sbin/floflis ]
