@@ -118,7 +118,7 @@ source /usr/lib/floflis/layers/dna/floflis
 ENDOFFILE
       echo "- Turning flo command into a executable..."
       $maysudo chmod 755 /usr/bin/flo && $maysudo chmod +x /usr/bin/flo
-      break ;;
+#      break ;;
    *)
       echo "${invalid}" ;;
 esac
