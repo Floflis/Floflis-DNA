@@ -141,7 +141,8 @@ then
          $maysudo rm -r -f /usr/lib/floflis/layers/core
          $maysudo mv -f /usr/lib/floflis/layers/dna/layers/core /usr/lib/floflis/layers
          echo "- Openning Floflis Core installer..."
-         $maysudo chmod +x /usr/lib/floflis/layers/core/install.sh && cd /usr/lib/floflis/layers/core && sh ./install.sh
+#         $maysudo chmod +x /usr/lib/floflis/layers/core/install.sh && cd /usr/lib/floflis/layers/core && sh ./install.sh
+         $maysudo chmod +x /usr/lib/floflis/layers/core/install.sh && cd /usr/lib/floflis/layers/core && bash install.sh
 fi
 fi
 # <Core
@@ -154,7 +155,8 @@ fi
          $maysudo rm -r -f /usr/lib/floflis/layers/server
          $maysudo mv -f /usr/lib/floflis/layers/dna/layers/server /usr/lib/floflis/layers
          echo "- Openning Floflis Server installer..."
-         $maysudo chmod +x /usr/lib/floflis/layers/server/install.sh && cd /usr/lib/floflis/layers/server && sh ./install.sh
+#         $maysudo chmod +x /usr/lib/floflis/layers/server/install.sh && cd /usr/lib/floflis/layers/server && sh ./install.sh
+         $maysudo chmod +x /usr/lib/floflis/layers/server/install.sh && cd /usr/lib/floflis/layers/server && bash install.sh
 fi
 fi
 # <Server
@@ -167,7 +169,8 @@ fi
          $maysudo rm -r -f /usr/lib/floflis/layers/soil
          $maysudo mv -f /usr/lib/floflis/layers/dna/layers/soil /usr/lib/floflis/layers
          echo "- Openning Floflis Soil installer..."
-         $maysudo chmod +x /usr/lib/floflis/layers/soil/install.sh && cd /usr/lib/floflis/layers/soil && sh ./install.sh
+#         $maysudo chmod +x /usr/lib/floflis/layers/soil/install.sh && cd /usr/lib/floflis/layers/soil && sh ./install.sh
+         $maysudo chmod +x /usr/lib/floflis/layers/soil/install.sh && cd /usr/lib/floflis/layers/soil && bash install.sh
 fi
 fi
 # <Soil
@@ -180,7 +183,8 @@ fi
          $maysudo rm -r -f /usr/lib/floflis/layers/grass
          $maysudo mv -f /usr/lib/floflis/layers/dna/layers/grass /usr/lib/floflis/layers
          echo "- Openning Floflis Grass installer..."
-         $maysudo chmod +x /usr/lib/floflis/layers/grass/install.sh && cd /usr/lib/floflis/layers/grass && sh ./install.sh
+#         $maysudo chmod +x /usr/lib/floflis/layers/grass/install.sh && cd /usr/lib/floflis/layers/grass && sh ./install.sh
+         $maysudo chmod +x /usr/lib/floflis/layers/grass/install.sh && cd /usr/lib/floflis/layers/grass && bash install.sh
 fi
 fi
 # <Grass
@@ -193,7 +197,8 @@ fi
          $maysudo rm -r -f /usr/lib/floflis/layers/base
          $maysudo mv -f /usr/lib/floflis/layers/dna/layers/base /usr/lib/floflis/layers
          echo "- Openning Floflis Base installer..."
-         $maysudo chmod +x /usr/lib/floflis/layers/base/install.sh && cd /usr/lib/floflis/layers/base && sh ./install.sh
+#         $maysudo chmod +x /usr/lib/floflis/layers/base/install.sh && cd /usr/lib/floflis/layers/base && sh ./install.sh
+         $maysudo chmod +x /usr/lib/floflis/layers/base/install.sh && cd /usr/lib/floflis/layers/base && bash install.sh
 fi
 fi
 # <Base
@@ -206,7 +211,8 @@ fi
          $maysudo rm -r -f /usr/lib/floflis/layers/home
          $maysudo mv -f /usr/lib/floflis/layers/dna/layers/home /usr/lib/floflis/layers
          echo "- Openning Floflis Home installer..."
-         $maysudo chmod +x /usr/lib/floflis/layers/home/install.sh && cd /usr/lib/floflis/layers/home && sh ./install.sh
+#         $maysudo chmod +x /usr/lib/floflis/layers/home/install.sh && cd /usr/lib/floflis/layers/home && sh ./install.sh
+         $maysudo chmod +x /usr/lib/floflis/layers/home/install.sh && cd /usr/lib/floflis/layers/home && bash install.sh
 fi
 fi
 # <Home
@@ -219,7 +225,8 @@ fi
          $maysudo rm -r -f /usr/lib/floflis/layers/ultimate
          $maysudo mv -f /usr/lib/floflis/layers/dna/layers/ultimate /usr/lib/floflis/layers
          echo "- Openning Floflis Ultimate installer..."
-         $maysudo chmod +x /usr/lib/floflis/layers/ultimate/install.sh && cd /usr/lib/floflis/layers/ultimate && sh ./install.sh
+#         $maysudo chmod +x /usr/lib/floflis/layers/ultimate/install.sh && cd /usr/lib/floflis/layers/ultimate && sh ./install.sh
+         $maysudo chmod +x /usr/lib/floflis/layers/ultimate/install.sh && cd /usr/lib/floflis/layers/ultimate && bash install.sh
 fi
 fi
 # <Ultimate
@@ -232,7 +239,8 @@ fi
          $maysudo rm -r -f /usr/lib/floflis/layers/planetary
          $maysudo mv -f /usr/lib/floflis/layers/dna/layers/planetary /usr/lib/floflis/layers
          echo "- Openning Floflis Planetary installer..."
-         $maysudo chmod +x /usr/lib/floflis/layers/planetary/install.sh && cd /usr/lib/floflis/layers/planetary && sh ./install.sh
+#         $maysudo chmod +x /usr/lib/floflis/layers/planetary/install.sh && cd /usr/lib/floflis/layers/planetary && sh ./install.sh
+         $maysudo chmod +x /usr/lib/floflis/layers/planetary/install.sh && cd /usr/lib/floflis/layers/planetary && bash install.sh
 fi
 # <Planetary
 fi
