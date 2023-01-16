@@ -17,6 +17,7 @@ nxtlayer="core"
 distrobase="blank"
 user="blank"
 # install="new" # new, ok
+specialbuildattempt="34"
 
 case "${nameOutS}"$(uname -s) in
     Linux*)     flofmach="Linux";;
