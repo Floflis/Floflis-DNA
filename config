@@ -1,7 +1,7 @@
 #!/bin/bash
-osbuild="2212_1"
+osbuild="2301"
 # support custom OS Build
-osbuildcodename="'Eusoumafoca'"
+osbuildcodename="\"Eusoumafoca\""
 # support custom OS Build Codename
 osname="Floflis"
 # support custom OS Name
@@ -11,7 +11,7 @@ osfullname="$osname $osversion build $osbuild $osbuildcodename"
 # support custom OS FullName
 updatepatch="0"
 # support custom OS Updatepatch
-year="2022"
+year="2023"
 layer="dna"
 nxtlayer="core"
 distrobase="blank"
