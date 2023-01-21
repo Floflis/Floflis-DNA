@@ -72,7 +72,7 @@ fi
 
 
 echo "${dna_ascii}"
-echo "(DEVELOPER/OEM-ONLY) Are you installing into an Cubic chroot? 💫 [Y/n]"
+echo "(DEVELOPER/OEM-ONLY) Are you installing into a Cubic chroot? 💫 [Y/n]"
    read cubicmode
    case $cubicmode in
       [nN])
