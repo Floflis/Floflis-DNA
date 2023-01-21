@@ -118,10 +118,11 @@ source /usr/lib/floflis/layers/dna/floflis
 ENDOFFILE
       echo "- Turning flo command into a executable..."
       $maysudo chmod 755 /usr/bin/flo && $maysudo chmod +x /usr/bin/flo
-#      break ;;
+      break ;;
    *)
       echo "${invalid}" ;;
 esac
+#note: disabling the last "break ;;" resulted in: "install.sh: line 122: syntax error near unexpected token `)'" and "install.sh: line 122: `   *)'"
 
 echo "- Installing Floflis DNA as init program..."
 $maysudo mv -f /usr/lib/floflis/layers/dna/flo-init /etc/init.d
