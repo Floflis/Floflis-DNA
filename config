@@ -1,5 +1,5 @@
 #!/bin/bash
-osbuild="2303_2"
+osbuild="2303_3"
 # support custom OS Build
 osbuildcodename="\"Eusoumafoca\""
 # support custom OS Build Codename
@@ -17,7 +17,7 @@ nxtlayer="core"
 distrobase="blank"
 user="blank"
 # install="new" # new, ok
-specialbuildattempt="40"
+specialbuildattempt="41"
 
 case "${nameOutS}"$(uname -s) in
     Linux*)     flofmach="Linux";;
