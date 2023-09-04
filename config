@@ -1,5 +1,5 @@
 #!/bin/bash
-osbuild="2304_4"
+osbuild="2309_1"
 # support custom OS Build
 osbuildcodename="\"Eusoumafoca\""
 # support custom OS Build Codename
