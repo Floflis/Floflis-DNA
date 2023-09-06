@@ -92,6 +92,7 @@ then
 echo "- Copying (probably) a lot of files. Don't worry if it takes several times..."
 fi
 $maysudo cp -r -f --preserve=all . /usr/lib/floflis/layers/dna
+#task: copy everything except layer's include/ folder
 $maysudo mv -f /usr/lib/floflis/layers/dna/config /usr/lib/floflis
 
 echo "- Installing Floflis in /usr/bin..."
@@ -277,6 +278,7 @@ fi
 $maysudo rm /usr/lib/floflis/layers/dna/install.sh # no need anymore to use the installer again
 $maysudo rm -r /usr/lib/floflis/layers/dna/layers # as layer are already transfered out of this temporary, built-in folder, it need to be cleared
 if [ -e /tmp/cubicmode ]; then
+   trash-empty
    apt clean all
    apt cache clear
    $maysudo rm -rf /tmp/cubicmode
