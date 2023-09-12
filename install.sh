@@ -80,6 +80,7 @@ echo "(DEVELOPER/OEM-ONLY) Are you installing into a Cubic chroot? 💫 [Y/n]"
          ;;
       [yY])
          echo "Ok, you're an Floflis developer installing using Cubic! Wonderful 🧚"
+         maysudo=""
          $maysudo mkdir /tmp/cubicmode
 esac
 
