@@ -33,6 +33,7 @@ case "${nameOutS}"$(uname -s) in
 esac
 #echo ${flofmach}
 #- Task: found a more complete, let's work on it later: https://gist.github.com/takuzoo3868/730000af7491dc354b0d38510493f982
+#- Task: also https://stackoverflow.com/questions/394230/how-to-detect-the-os-from-a-bash-script
 
 case "${nameOutD}"$(awk -F= '/^NAME/{print $2}' /etc/os-release | tr -d '"') in
     Debian*)     flofdistro=Debian;;
@@ -51,6 +52,7 @@ case "${unameOutM}" in
     i686)   flofarch="386";;
     x86_64) flofarch="amd64";;
     arm)    dpkg --print-flofarch | grep -q "arm64" && flofarch="arm64" || flofarch="arm";;
+    aarch64) flofarch="arm64";;
     riscv64) flofarch="riscv64"
 esac
 #echo ${flofarch}
