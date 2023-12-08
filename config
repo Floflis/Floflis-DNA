@@ -23,7 +23,9 @@ case "${nameOutS}"$(uname -s) in
     Linux*)     flofmach="Linux";;
     Darwin*)    flofmach="Mac";;
     CYGWIN*)    flofmach="Cygwin";; # if 64-bit, Cygwin isn't detected
+    msys*)    flofmach="msysWindows";;
     MINGW*)     flofmach="MinGw";;
+    SunOS*)   flofmach="Solaris";;
     bsd*)   flofmach="BSD";;
     FreeBSD*)   flofmach="FreeBSD";;
     GNU*)       flofmach="GNU";;
