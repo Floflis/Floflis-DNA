@@ -24,6 +24,7 @@ case "${nameOutS}"$(uname -s) in
     Darwin*)    flofmach="Mac";;
     CYGWIN*)    flofmach="Cygwin";; # if 64-bit, Cygwin isn't detected
     MINGW*)     flofmach="MinGw";;
+    bsd*)   flofmach="BSD";;
     FreeBSD*)   flofmach="FreeBSD";;
     GNU*)       flofmach="GNU";;
     *)          flofmach="UNKNOWN:${nameOutD}"
