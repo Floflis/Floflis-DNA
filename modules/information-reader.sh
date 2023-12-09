@@ -24,10 +24,10 @@ fi
 
 if [ "$1" = "codeofconduct" ] || [ "$1" = "conductcode" ] || [ "$1" = "coc" ] || [ "$1" = "--coc" ]; then
    echo "Floflis' Code of Conduct:"
-   cat /usr/lib/floflis/layers/dna/CODE_OF_CONDUCT.md
+   cat "$PREFIX"usr/lib/floflis/layers/dna/CODE_OF_CONDUCT.md
 fi
 
 if [ "$1" = "changelog" ] || [ "$1" = "CHANGELOG" ]; then
    echo "Floflis' CHANGELOG:"
-   cat /usr/lib/floflis/layers/dna/CHANGELOG.md
+   cat "$PREFIX"usr/lib/floflis/layers/dna/CHANGELOG.md
 fi

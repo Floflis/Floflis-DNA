@@ -3,7 +3,7 @@ if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
    echo "Power/energy:"
    echo "   shutdown, shu, off          Shutdown/power-off Floflis"
    echo "   restart, res, reboot        Restarts Floflis"
-   if [ ! -e /usr/local/bin/*antiX* ]; then
+   if [ ! -e "$PREFIX"usr/local/bin/*antiX* ]; then
       echo "   suspend, sus, standby       Suspends Floflis"
 fi
 fi
@@ -18,7 +18,7 @@ fi
 # todo:if command is "reset" or "refresh", ask
 
 if [ "$1" = "suspend" ] || [ "$1" = "sus" ] || [ "$1" = "standby" ]; then
-    if [ -e /usr/local/bin/*antiX* ]; then
+    if [ -e "$PREFIX"usr/local/bin/*antiX* ]; then
        echo "- This is a antiX-based OS. Suspending your system is not supported, sorry."
        else
           systemctl suspend

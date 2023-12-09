@@ -23,16 +23,19 @@ case "${nameOutS}"$(uname -s) in
     Linux*)     flofmach="Linux";;
     Darwin*)    flofmach="Mac";;
     CYGWIN*)    flofmach="Cygwin";; # if 64-bit, Cygwin isn't detected
-    msys*)    flofmach="msysWindows";;
+    msys*)      flofmach="msysWindows";;
     MINGW*)     flofmach="MinGw";;
-    SunOS*)   flofmach="Solaris";;
-    bsd*)   flofmach="BSD";;
+    SunOS*)     flofmach="Solaris";;
+    bsd*)       flofmach="BSD";;
     FreeBSD*)   flofmach="FreeBSD";;
     GNU*)       flofmach="GNU";;
     *)          flofmach="UNKNOWN:${nameOutD}"
 esac
-if [[ $(echo $PREFIX | grep -o "com.termux") == "com.termux" ]]; then
-flofmach="Termux" #from https://foosel.net/til/how-to-detect-termux-in-a-script/
+if [[ $(echo $PREFIX | grep -o "com.termux") == "com.termux" ]];
+then
+   flofmach="Termux" #from https://foosel.net/til/how-to-detect-termux-in-a-script/
+else
+   PREFIX="/"
 fi
 #echo ${flofmach}
 #- Task: found a more complete, let's work on it later: https://gist.github.com/takuzoo3868/730000af7491dc354b0d38510493f982
@@ -40,20 +43,21 @@ fi
 
 case "${nameOutD}"$(awk -F= '/^NAME/{print $2}' /etc/os-release | tr -d '"') in
     Debian*)     flofdistro=Debian;;
+    Floflis*)    flofdistro=Floflis;;
     Ubuntu*)     flofdistro=Ubuntu;;
     Fedora*)     flofdistro=Fedora;; #from https://wuhrr.wordpress.com/2020/06/19/detect-os-and-distro-in-bash/
-    Raspbian*)     flofdistro=Raspbian;; #from https://wuhrr.wordpress.com/2020/06/19/detect-os-and-distro-in-bash/
-    *)          flofdistro="UNKNOWN:${nameOutD}"
+    Raspbian*)   flofdistro=Raspbian;; #from https://wuhrr.wordpress.com/2020/06/19/detect-os-and-distro-in-bash/
+    *)           flofdistro="UNKNOWN:${nameOutD}"
 esac
 #echo ${flofdistro}
 
 unameOutM="$(uname -m)"
 case "${unameOutM}" in
-    i286)   flofarch="286";;
-    i586)   flofarch="586";;
-    i386)   flofarch="386";;
-    i686)   flofarch="386";;
-    x86_64) flofarch="amd64";;
+    i286)    flofarch="286";;
+    i586)    flofarch="586";;
+    i386)    flofarch="386";;
+    i686)    flofarch="386";;
+    x86_64)  flofarch="amd64";;
     arm)    dpkg --print-flofarch | grep -q "arm64" && flofarch="arm64" || flofarch="arm";;
     aarch64) flofarch="arm64";;
     riscv64) flofarch="riscv64"
