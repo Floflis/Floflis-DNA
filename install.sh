@@ -282,7 +282,7 @@ fi
 
 $maysudo rm "$PREFIX"usr/lib/floflis/layers/dna/install.sh # no need anymore to use the installer again
 $maysudo rm -r "$PREFIX"usr/lib/floflis/layers/dna/layers # as layer are already transfered out of this temporary, built-in folder, it need to be cleared
-$maysudo rm -r "$PREFIX"usr/lib/floflis/layers/dna/.nostalgit-HAVE-TO-RESTORE
+if [ -e "$PREFIX"usr/lib/floflis/layers/dna/.nostalgit-HAVE-TO-RESTORE ]; then $maysudo rm -r "$PREFIX"usr/lib/floflis/layers/dna/.nostalgit-HAVE-TO-RESTORE;fi
 if [ -e /tmp/cubicmode ]; then
    trash-empty
    apt clean all
