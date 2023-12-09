@@ -31,6 +31,9 @@ case "${nameOutS}"$(uname -s) in
     GNU*)       flofmach="GNU";;
     *)          flofmach="UNKNOWN:${nameOutD}"
 esac
+if [[ $(echo $PREFIX | grep -o "com.termux") == "com.termux" ]]; then
+flofmach="Termux" #from https://foosel.net/til/how-to-detect-termux-in-a-script/
+fi
 #echo ${flofmach}
 #- Task: found a more complete, let's work on it later: https://gist.github.com/takuzoo3868/730000af7491dc354b0d38510493f982
 #- Task: also https://stackoverflow.com/questions/394230/how-to-detect-the-os-from-a-bash-script

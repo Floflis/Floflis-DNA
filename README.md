@@ -28,6 +28,8 @@
 
 [Site](https://floflis.github.io/) | [Download](https://floflis.github.io/download/) | [Blog](https://floflis.github.io/blog/) | [Manuals/documentation](https://floflis.github.io/docs/) | [Peepeth](https://peepeth.com/floflis) | [Twitter](https://twitter.com/FloflisOS) | [Developers](https://floflis.github.io/docs/dev/) | [Sources](https://floflis.github.io/source/)
 
+[![SWUbanner](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine)
+
 # Floflis DNA
 
 The heart of Floflis, 100% CLI.
