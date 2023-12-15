@@ -59,7 +59,9 @@ case "${unameOutM}" in
     i686)    flofarch="386";;
     x86_64)  flofarch="amd64";;
     arm)    dpkg --print-flofarch | grep -q "arm64" && flofarch="arm64" || flofarch="arm";;
-    aarch64) flofarch="arm64";;
+    aarch64) flofarch="arm64";; # really necessary? don't the previous do the same?
+    armv7l) flofarch="armv7l";; #inspo from https://stackoverflow.com/a/29167402 HAVE TO VOTE
+    armv7hl) flofarch="armv7hl";; #inspo from https://stackoverflow.com/a/29167402 HAVE TO VOTE ; SAME AS PREVIOUS
     riscv64) flofarch="riscv64"
 esac
 #echo ${flofarch}
