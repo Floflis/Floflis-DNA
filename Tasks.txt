@@ -1,24 +1,20 @@
 - move 'dna_ascii' to a resources folder
-- symlink DISCLAIMER and other similar files to upper layers (check CID before)
-- "config": detect Ubuntu Cinnamon Remix
-- DNA and Core: module list then modules.sh uses it
-
+- modules as folders with git ?and their oppose versions (uses git branches)?
 - test fl on ARM chroot then fix the $maysudo mess from this to upper layers
+
+- symlink DISCLAIMER and other similar files to upper layers (check CID before)
+-? "config": detect Ubuntu Cinnamon Remix
+- DNA and Core: module list then modules.sh uses it
 
 - store distrobase
 
-- don't install lightdm and others if Ubuntu
+- Last step of Floflis install is to run install-custom.sh, that constains UniOS install
 
-Last step of Floflis install is to run install-custom.sh, that constains UniOS install
+- Issue: even not completing install, it considers the latest layer (to fix that, Floflis DNA should only load layers' installers if previous are installed. previous are only registered as installed after steps are identified as completed). Support install resume
+- DNA install.sh only install next layers if previous are installed
 
-Issue: even not completing install, it considers the latest layer (to fix that, Floflis DNA should only load layers' installers if previous are installed. previous are only registered as installed after steps are identified as completed)
-
-modules as folders with git and their oppose versions (uses git branches)
-
-DNA install.sh only install next layers if previous are installed
 DNA install.sh ask to keep git folder when installing
 
-fix: it recognizes is Linux, but shows unknw
-fix: isnt reading distro name, showing unknw
-
-itself and installer: use SH
+-? fix: it recognizes is Linux, but shows unknw
+-? fix: isnt reading distro name, showing unknw
+-? itself and installer: use SH (full POSIX compatible)
