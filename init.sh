@@ -11,6 +11,9 @@ read -r -d '' dna_ascii << "EOF"
 ~   `-~ `-`   `-~ `-`   `-~ `-
 
 EOF
+echo "Initializing..."
+#https://github.com/FilePeace/webpresent
+webpresent init -r
 echo "${dna_ascii}"
 
 echo "Welcome! Before adding that folder (Floflis DNA) to your device, we need to configure the install, to make it more lightweight."
