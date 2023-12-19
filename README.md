@@ -53,7 +53,7 @@ For more details, visit our [downloads page](https://floflis.github.io/download/
 Assuming `Floflis DNA` folder is on the target device, run the following command inside this folder:
 
 ```sh
-sudo chmod +x install.sh && sudo sh ./install.sh
+sudo chmod +x install.sh && sudo bash ./install.sh
 ```
 
 
@@ -67,13 +67,13 @@ Update from P2P network (not available yet in DNA):
 floflis update
 ```
 
-Update from GitLab:
+Update from GitLab (halted, will return someday):
 
 ```sh
 floflis update --gitlab
 ```
 
-Update from GitHub:
+Update from GitHub (halted, will return someday):
 
 ```sh
 floflis update --github
