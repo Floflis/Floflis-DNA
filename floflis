@@ -2,18 +2,18 @@
 # < --------------------- take extra attention, ensure compatibility on init and install ------------
 
 # load definitions & settings ---->
-if [[ $(echo $PREFIX | grep -o "com.termux") == "com.termux" ]];
+if [[ $(echo $FLOPREFIX | grep -o "com.termux") == "com.termux" ]];
 then
 . /data/data/com.termux/files/usr/lib/floflis/./config
 else
 . /usr/lib/floflis/./config
-export PREFIX
+export FLOPREFIX
 fi
 export flofmach && export flofdistro && export flofarch && export osfullname && export osname && export osversion && export osbuild && export osbuildcodename && export updatepatch && export year && export layer && export nxtlayer && export distrobase && export user && export specialbuildattempt
 # <---- load definitions & settings
 
 # supports 'flo' short command
-if [ -e "$PREFIX"usr/bin/flo ]
+if [ -e "$FLOPREFIX"usr/bin/flo ]
 then
    flo="flo"
 else
@@ -26,21 +26,21 @@ versionshow="        \e[101m $osname \e[0m\e[100m build $osbuild \e[0m"
 
 # shows presentation if user just types 'floflis/flo':
 if [ "$1" = "" ]; then
-   cat "$PREFIX"usr/lib/floflis/layers/$layer/presentation
+   cat "$FLOPREFIX"usr/lib/floflis/layers/$layer/presentation
    echo -e "$versionshow | $osbuildcodename - $year"
    echo "Type '$flo --help' (without quotes) to see a list of available commands."
 # detect version 071 and fix>
-   if [ -e "$PREFIX"usr/sbin/floflis ]
+   if [ -e "$FLOPREFIX"usr/sbin/floflis ]
       then
          echo "- Floflis build 071 detected. It uses a old folder structure. Fixing..."
-         sudo mkdir "$PREFIX"usr/lib/floflis && sudo mv -f "$PREFIX"usr/sbin/layers "$PREFIX"usr/lib/floflis
-         sudo mv -f "$PREFIX"usr/sbin/floflis "$PREFIX"usr/bin
+         sudo mkdir "$FLOPREFIX"usr/lib/floflis && sudo mv -f "$FLOPREFIX"usr/sbin/layers "$FLOPREFIX"usr/lib/floflis
+         sudo mv -f "$FLOPREFIX"usr/sbin/floflis "$FLOPREFIX"usr/bin
          echo "Fixed."
 fi
 # <detect 071 version and fix
 fi
 # re-enable after upgrade feature is implemented. also, should detect if Core is already installed before asking
-#   if [ ! -e "$PREFIX"usr/lib/floflis/layers/core ]
+#   if [ ! -e "$FLOPREFIX"usr/lib/floflis/layers/core ]
 #      then
 #         echo -e "\e[101m NOTE: FLOFLIS DNA IS NOW UPGRADEABLE TO FLOFLIS CORE! \e[0m"
 #fi
@@ -67,89 +67,89 @@ fi
 
 # load modules
 # -
-if [ -e "$PREFIX"usr/lib/floflis/layers/dna/modules ]
+if [ -e "$FLOPREFIX"usr/lib/floflis/layers/dna/modules ]
 then
-    . "$PREFIX"usr/lib/floflis/layers/dna/./modules.sh
+    . "$FLOPREFIX"usr/lib/floflis/layers/dna/./modules.sh
 fi
 
 # load information and modules from layers
 # -
 # Core
-if [ -e "$PREFIX"usr/lib/floflis/layers/core ]
+if [ -e "$FLOPREFIX"usr/lib/floflis/layers/core ]
 then
-#    sudo sed -i 's/dna/core/g' "$PREFIX"usr/lib/floflis/config
+#    sudo sed -i 's/dna/core/g' "$FLOPREFIX"usr/lib/floflis/config
 #    layernm="Floflis Core"
-    . "$PREFIX"usr/lib/floflis/layers/core/./floflis
+    . "$FLOPREFIX"usr/lib/floflis/layers/core/./floflis
 #else
 #    layernm="Floflis DNA"
 fi
 # -
 # Server
-if [ -e "$PREFIX"usr/lib/floflis/layers/server ]
+if [ -e "$FLOPREFIX"usr/lib/floflis/layers/server ]
 then
-#    sudo sed -i 's/dna/core/g' "$PREFIX"usr/lib/floflis/config
+#    sudo sed -i 's/dna/core/g' "$FLOPREFIX"usr/lib/floflis/config
 #    layernm="Floflis Core"
-    . "$PREFIX"usr/lib/floflis/layers/server/./floflis
+    . "$FLOPREFIX"usr/lib/floflis/layers/server/./floflis
 #else
 #    layernm="Floflis DNA"
 fi
 # -
 # Soil
-if [ -e "$PREFIX"usr/lib/floflis/layers/soil ]
+if [ -e "$FLOPREFIX"usr/lib/floflis/layers/soil ]
 then
-#    sudo sed -i 's/dna/core/g' "$PREFIX"usr/lib/floflis/config
+#    sudo sed -i 's/dna/core/g' "$FLOPREFIX"usr/lib/floflis/config
 #    layernm="Floflis Core"
-    . "$PREFIX"usr/lib/floflis/layers/soil/./floflis
+    . "$FLOPREFIX"usr/lib/floflis/layers/soil/./floflis
 #else
 #    layernm="Floflis DNA"
 fi
 # -
 # Grass
-if [ -e "$PREFIX"usr/lib/floflis/layers/grass ]
+if [ -e "$FLOPREFIX"usr/lib/floflis/layers/grass ]
 then
-#    sudo sed -i 's/dna/core/g' "$PREFIX"usr/lib/floflis/config
+#    sudo sed -i 's/dna/core/g' "$FLOPREFIX"usr/lib/floflis/config
 #    layernm="Floflis Core"
-    . "$PREFIX"usr/lib/floflis/layers/grass/./floflis
+    . "$FLOPREFIX"usr/lib/floflis/layers/grass/./floflis
 #else
 #    layernm="Floflis DNA"
 fi
 # -
 # Base
-if [ -e "$PREFIX"usr/lib/floflis/layers/base ]
+if [ -e "$FLOPREFIX"usr/lib/floflis/layers/base ]
 then
-#    sudo sed -i 's/dna/core/g' "$PREFIX"usr/lib/floflis/config
+#    sudo sed -i 's/dna/core/g' "$FLOPREFIX"usr/lib/floflis/config
 #    layernm="Floflis Core"
-    . "$PREFIX"usr/lib/floflis/layers/base/./floflis
+    . "$FLOPREFIX"usr/lib/floflis/layers/base/./floflis
 #else
 #    layernm="Floflis DNA"
 fi
 # -
 # Home
-if [ -e "$PREFIX"usr/lib/floflis/layers/home ]
+if [ -e "$FLOPREFIX"usr/lib/floflis/layers/home ]
 then
-#    sudo sed -i 's/dna/core/g' "$PREFIX"usr/lib/floflis/config
+#    sudo sed -i 's/dna/core/g' "$FLOPREFIX"usr/lib/floflis/config
 #    layernm="Floflis Core"
-    . "$PREFIX"usr/lib/floflis/layers/home/./floflis
+    . "$FLOPREFIX"usr/lib/floflis/layers/home/./floflis
 #else
 #    layernm="Floflis DNA"
 fi
 # -
 # Ultimate
-if [ -e "$PREFIX"usr/lib/floflis/layers/ultimate ]
+if [ -e "$FLOPREFIX"usr/lib/floflis/layers/ultimate ]
 then
-#    sudo sed -i 's/dna/core/g' "$PREFIX"usr/lib/floflis/config
+#    sudo sed -i 's/dna/core/g' "$FLOPREFIX"usr/lib/floflis/config
 #    layernm="Floflis Core"
-    . "$PREFIX"usr/lib/floflis/layers/ultimate/./floflis
+    . "$FLOPREFIX"usr/lib/floflis/layers/ultimate/./floflis
 #else
 #    layernm="Floflis DNA"
 fi
 # -
 # Planetary
-if [ -e "$PREFIX"usr/lib/floflis/layers/planetary ]
+if [ -e "$FLOPREFIX"usr/lib/floflis/layers/planetary ]
 then
-#    sudo sed -i 's/dna/core/g' "$PREFIX"usr/lib/floflis/config
+#    sudo sed -i 's/dna/core/g' "$FLOPREFIX"usr/lib/floflis/config
 #    layernm="Floflis Core"
-    . "$PREFIX"usr/lib/floflis/layers/planetary/./floflis
+    . "$FLOPREFIX"usr/lib/floflis/layers/planetary/./floflis
 #else
 #    layernm="Floflis DNA"
 fi
@@ -222,9 +222,9 @@ fi
 #EOF
 #         echo "Please note P2P isn't yet available."
 #         echo "- Upgrading to Core layer from GitLab..."
-#         cd "$PREFIX"usr/lib/floflis/layers
+#         cd "$FLOPREFIX"usr/lib/floflis/layers
 #         sudo git clone https://gitlab.com/Floflis/Floflis-Core.git core
-#         sudo sed -i 's/dna/core/g' "$PREFIX"usr/lib/floflis/layers/dna/config.sh
+#         sudo sed -i 's/dna/core/g' "$FLOPREFIX"usr/lib/floflis/layers/dna/config.sh
 #         echo "(✓) Floflis DNA has been upgraded to Floflis Core." && exit
 #fi
 #fi
