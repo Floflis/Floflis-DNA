@@ -2,7 +2,7 @@
 # < --------------------- take extra attention, ensure compatibility on init and install ------------
 
 # load definitions & settings ---->
-if [[ $(echo $FLOPREFIX | grep -o "com.termux") == "com.termux" ]];
+if [[ $(echo $PREFIX | grep -o "com.termux") == "com.termux" ]];
 then
 . /data/data/com.termux/files/usr/lib/floflis/./config
 else
