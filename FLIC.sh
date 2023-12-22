@@ -1,0 +1,3 @@
+buildprefix="attempt "
+
+export buildprefix
