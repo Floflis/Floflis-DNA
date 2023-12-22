@@ -4,9 +4,9 @@
 # load definitions & settings ---->
 if [[ $(echo $PREFIX | grep -o "com.termux") == "com.termux" ]];
 then
-. /data/data/com.termux/files/usr/lib/floflis/./config
+. /data/data/com.termux/files"$FLOPREFIX"usr/lib/floflis/./config
 else
-. /usr/lib/floflis/./config
+. "$FLOPREFIX"usr/lib/floflis/./config
 export FLOPREFIX
 fi
 export flofmach && export flofdistro && export flofarch && export osfullname && export osname && export osversion && export osbuild && export osbuildcodename && export updatepatch && export year && export layer && export nxtlayer && export distrobase && export user && export specialbuildattempt
@@ -129,7 +129,7 @@ if [ -e "$FLOPREFIX"usr/lib/floflis/layers/home ]
 then
 #    sudo sed -i 's/dna/core/g' "$FLOPREFIX"usr/lib/floflis/config
 #    layernm="Floflis Core"
-    . "$FLOPREFIX"usr/lib/floflis/layers/home/./floflis
+    . "$FLOPREFIX"usr/lib/floflis/layers"$FLOPREFIX"home/./floflis
 #else
 #    layernm="Floflis DNA"
 fi
