@@ -1,12 +1,12 @@
 #!/bin/bash
-osbuild="2311_1"
+osbuild="2312_1"
 # support custom OS Build
 #osbuildcodename="\"Eusoumafoca\""
 osbuildcodename="\"CorreriaBrasileira\""
 # support custom OS Build Codename
 osname="Floflis"
 # support custom OS Name
-osversion="19"
+osversion="1.0"
 # support custom OS Version
 osfullname="$osname $osversion build $osbuild $osbuildcodename"
 # support custom OS FullName
