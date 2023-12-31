@@ -4,9 +4,9 @@
 # load definitions & settings ---->
 if [[ $(echo $PREFIX | grep -o "com.termux") == "com.termux" ]];
 then
-. /data/data/com.termux/files"$FLOPREFIX"usr/lib/floflis/./config
+. /data/data/com.termux/files/usr/lib/floflis/./config
 else
-. "$FLOPREFIX"usr/lib/floflis/./config
+. /usr/lib/floflis/./config
 export FLOPREFIX
 fi
 export flofmach && export flofdistro && export flofarch && export osfullname && export osname && export osversion && export osbuild && export osbuildcodename && export updatepatch && export year && export layer && export nxtlayer && export distrobase && export user && export specialbuildattempt
