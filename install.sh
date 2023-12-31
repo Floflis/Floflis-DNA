@@ -77,7 +77,7 @@ fi
 
 echo "${dna_ascii}"
 
-if [[ $flofmach != "Termux" ]]; then
+if [[ "$flofmach" != "Termux" ]]; then
 echo "(DEVELOPER/OEM-ONLY) Are you installing into a Cubic chroot? 💫 [Y/n]"
    read cubicmode
    case $cubicmode in
@@ -169,7 +169,21 @@ fi
          $maysudo chmod +x "$FLOPREFIX"usr/lib/floflis/layers/server/install.sh && cd "$FLOPREFIX"usr/lib/floflis/layers/server && bash install.sh
 fi
 fi
-# <Server
+## <Server
+## Blockchain>
+#   if [ -e "$FLOPREFIX"usr/lib/floflis/layers/core/floflis ]
+#   then
+#      if [ -e "$FLOPREFIX"usr/lib/floflis/layers/dna/layers/blockchain ]
+#      then
+#         echo "- Preparing to install Blockchain layer..."
+#         $maysudo rm -r -f "$FLOPREFIX"usr/lib/floflis/layers/blockchain
+#         $maysudo mv -f "$FLOPREFIX"usr/lib/floflis/layers/dna/layers/blockchain "$FLOPREFIX"usr/lib/floflis/layers
+#         echo "- Openning Floflis Blockchain installer..."
+##         $maysudo chmod +x "$FLOPREFIX"usr/lib/floflis/layers/blockchain/install.sh && cd "$FLOPREFIX"usr/lib/floflis/layers/blockchain && sh ./install.sh
+#         $maysudo chmod +x "$FLOPREFIX"usr/lib/floflis/layers/blockchain/install.sh && cd "$FLOPREFIX"usr/lib/floflis/layers/blockchain && bash install.sh
+#fi
+#fi
+# <Blockchain
 # Soil>
    if [ -e "$FLOPREFIX"usr/lib/floflis/layers/core/floflis ]
    then
@@ -240,19 +254,19 @@ fi
 fi
 fi
 # <Ultimate
-# Planetary>
+# Quantum>
    if [ -e "$FLOPREFIX"usr/lib/floflis/layers/ultimate/floflis ]
    then
-      if [ -e "$FLOPREFIX"usr/lib/floflis/layers/dna/layers/planetary ]
+      if [ -e "$FLOPREFIX"usr/lib/floflis/layers/dna/layers/quantum ]
       then
-         echo "- Preparing to install Planetary layer..."
-         $maysudo rm -r -f "$FLOPREFIX"usr/lib/floflis/layers/planetary
-         $maysudo mv -f "$FLOPREFIX"usr/lib/floflis/layers/dna/layers/planetary "$FLOPREFIX"usr/lib/floflis/layers
-         echo "- Openning Floflis Planetary installer..."
-#         $maysudo chmod +x "$FLOPREFIX"usr/lib/floflis/layers/planetary/install.sh && cd "$FLOPREFIX"usr/lib/floflis/layers/planetary && sh ./install.sh
-         $maysudo chmod +x "$FLOPREFIX"usr/lib/floflis/layers/planetary/install.sh && cd "$FLOPREFIX"usr/lib/floflis/layers/planetary && bash install.sh
+         echo "- Preparing to install Quantum layer..."
+         $maysudo rm -r -f "$FLOPREFIX"usr/lib/floflis/layers/quantum
+         $maysudo mv -f "$FLOPREFIX"usr/lib/floflis/layers/dna/layers/quantum "$FLOPREFIX"usr/lib/floflis/layers
+         echo "- Openning Floflis Quantum installer..."
+#         $maysudo chmod +x "$FLOPREFIX"usr/lib/floflis/layers/quantum/install.sh && cd "$FLOPREFIX"usr/lib/floflis/layers/quantum && sh ./install.sh
+         $maysudo chmod +x "$FLOPREFIX"usr/lib/floflis/layers/quantum/install.sh && cd "$FLOPREFIX"usr/lib/floflis/layers/quantum && bash install.sh
 fi
-# <Planetary
+# <Quantum
 fi
 fi
 echo "- Turning Floflis into a executable..."
