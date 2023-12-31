@@ -41,6 +41,7 @@ else
    FLOPREFIX="/"
 fi
 export FLOPREFIX
+export flofmach
 #echo ${flofmach}
 #- Task: found a more complete, let's work on it later: https://gist.github.com/takuzoo3868/730000af7491dc354b0d38510493f982
 #- Task: also https://stackoverflow.com/questions/394230/how-to-detect-the-os-from-a-bash-script
@@ -69,3 +70,6 @@ case "${unameOutM}" in
     riscv64) flofarch="riscv64"
 esac
 #echo ${flofarch}
+
+export flofarch && export flofdistro
+export osbuild && export osbuildcodename && export osname && export osversion && export osfullname && export updatepatch && export year && export layer && export nxtlayer && export distrobase && export user && export specialbuildattempt
