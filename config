@@ -39,6 +39,7 @@ then
 else
    FLOPREFIX="/"
 fi
+export FLOPREFIX
 #echo ${flofmach}
 #- Task: found a more complete, let's work on it later: https://gist.github.com/takuzoo3868/730000af7491dc354b0d38510493f982
 #- Task: also https://stackoverflow.com/questions/394230/how-to-detect-the-os-from-a-bash-script
