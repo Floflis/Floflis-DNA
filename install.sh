@@ -76,6 +76,8 @@ fi
 
 
 echo "${dna_ascii}"
+
+if [[ $flofmach == "Termux" ]]; then
 echo "(DEVELOPER/OEM-ONLY) Are you installing into a Cubic chroot? 💫 [Y/n]"
    read cubicmode
    case $cubicmode in
@@ -87,6 +89,7 @@ echo "(DEVELOPER/OEM-ONLY) Are you installing into a Cubic chroot? 💫 [Y/n]"
          maysudo=""
          $maysudo mkdir /tmp/cubicmode
 esac
+fi
 
 
 if [ ! -e "$FLOPREFIX"usr/lib/floflis/layers ]; then echo "- Creating Floflis' Layers folder...";mkdir -p "$FLOPREFIX"usr/lib/floflis/layers; fi
