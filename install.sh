@@ -77,7 +77,7 @@ fi
 
 echo "${dna_ascii}"
 
-if [[ $flofmach == "Termux" ]]; then
+if [[ $flofmach != "Termux" ]]; then
 echo "(DEVELOPER/OEM-ONLY) Are you installing into a Cubic chroot? 💫 [Y/n]"
    read cubicmode
    case $cubicmode in
