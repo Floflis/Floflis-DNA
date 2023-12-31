@@ -1,7 +1,8 @@
 #!/bin/bash
 osbuild="2311_1"
 # support custom OS Build
-osbuildcodename="\"Eusoumafoca\""
+#osbuildcodename="\"Eusoumafoca\""
+osbuildcodename="\"CorreriaBrasileira\""
 # support custom OS Build Codename
 osname="Floflis"
 # support custom OS Name
