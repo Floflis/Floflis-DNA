@@ -37,6 +37,8 @@ if [ "$is_root" = "false" ]
       maysudo=""
 fi
 
+if [[ "$flofmach" == "Termux" ]]; then maysudo="";fi
+
 #dna_ascii=$(cat "$FLOPREFIX"usr/lib/floflis/layers/dna/dna_ascii)
 dna_ascii=$(cat dna_ascii)
 #
