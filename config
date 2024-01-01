@@ -1,4 +1,5 @@
 #!/bin/bash
+#Floflis 1.0 - in homenage to Ian Murdock; the creator of Diaspora; the creator of Grooveshark, and all others made victim by the power collude of Microsoft+Meta/Facebook.
 osbuild="2312_1"
 # support custom OS Build
 #osbuildcodename="\"Eusoumafoca\""
